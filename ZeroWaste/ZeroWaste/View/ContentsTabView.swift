@@ -25,6 +25,7 @@ struct ContentsTabView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $tabSelection) {
+                // MARK: 미션 탭
                 MissionHomeView()
                     .tabItem {
                         Image(systemName: "rectangle.grid.3x2")
@@ -32,17 +33,16 @@ struct ContentsTabView: View {
                     }
                     .tag(Tabs.missionTab)
 
-
-
-                Text("Second Tab")
+                // MARK: 지도 탭
+                StoreMapView()
                     .tabItem {
-                        Image(systemName: "tv.fill")
-                        Text("Second Tab")
+                        Image(systemName: "mappin.and.ellipse")
+                        Text("지도")
                     }
                     .tag(Tabs.tab2)
             }
 
-            .navigationBarTitle(returnNaviBarTitle(tabSelection: self.tabSelection)) //add the NavigationBarTitle here.
+            .navigationBarTitle(navBarTitle(tabSelection: self.tabSelection)) //add the NavigationBarTitle here.
 
         }
 
@@ -50,10 +50,10 @@ struct ContentsTabView: View {
 
 
     // MARK: - Logic
-    private func returnNaviBarTitle(tabSelection: Tabs) -> String {
+    private func navBarTitle(tabSelection: Tabs) -> String {
         switch tabSelection{
         case .missionTab: return "미션"
-        case .tab2: return "Tab2"
+        case .tab2: return "제로웨이스트 상점 지도"
         }
     }
 }

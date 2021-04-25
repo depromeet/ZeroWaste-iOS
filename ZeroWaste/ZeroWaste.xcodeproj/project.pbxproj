@@ -12,6 +12,9 @@
 		229BD28D26347F94002CD21B /* MissionHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BD28C26347F94002CD21B /* MissionHomeView.swift */; };
 		229BD2932634FB57002CD21B /* MissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BD2922634FB57002CD21B /* MissionCell.swift */; };
 		229BD29B26351C72002CD21B /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BD29A26351C72002CD21B /* MissionView.swift */; };
+		229BD2A126353887002CD21B /* StoreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BD2A026353887002CD21B /* StoreMapView.swift */; };
+		229BD2A9263540CF002CD21B /* RegistStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BD2A8263540CF002CD21B /* RegistStoreView.swift */; };
+		229BD2AF263542E0002CD21B /* CTAButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BD2AE263542E0002CD21B /* CTAButtonStyle.swift */; };
 		22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4ACB8262C1E1500B87217 /* ZeroWasteApp.swift */; };
 		22B4ACBB262C1E1600B87217 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4ACBA262C1E1600B87217 /* ContentView.swift */; };
 		22B4ACBD262C1E1600B87217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B4ACBC262C1E1600B87217 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		229BD28C26347F94002CD21B /* MissionHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionHomeView.swift; sourceTree = "<group>"; };
 		229BD2922634FB57002CD21B /* MissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCell.swift; sourceTree = "<group>"; };
 		229BD29A26351C72002CD21B /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		229BD2A026353887002CD21B /* StoreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapView.swift; sourceTree = "<group>"; };
+		229BD2A8263540CF002CD21B /* RegistStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistStoreView.swift; sourceTree = "<group>"; };
+		229BD2AE263542E0002CD21B /* CTAButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonStyle.swift; sourceTree = "<group>"; };
 		22B4ACB5262C1E1500B87217 /* ZeroWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B4ACB8262C1E1500B87217 /* ZeroWasteApp.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ZeroWasteApp.swift; sourceTree = "<group>"; tabWidth = 4; };
 		22B4ACBA262C1E1600B87217 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 		229BD28326347DDB002CD21B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				229BD2AD263542D3002CD21B /* ViewStyle */,
+				229BD29F26353875002CD21B /* Map */,
 				229BD28426347E59002CD21B /* ContentsTabView.swift */,
 				229BD28C26347F94002CD21B /* MissionHomeView.swift */,
 				229BD29A26351C72002CD21B /* MissionView.swift */,
@@ -112,6 +120,23 @@
 				229BD2922634FB57002CD21B /* MissionCell.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		229BD29F26353875002CD21B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				229BD2A026353887002CD21B /* StoreMapView.swift */,
+				229BD2A8263540CF002CD21B /* RegistStoreView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		229BD2AD263542D3002CD21B /* ViewStyle */ = {
+			isa = PBXGroup;
+			children = (
+				229BD2AE263542E0002CD21B /* CTAButtonStyle.swift */,
+			);
+			path = ViewStyle;
 			sourceTree = "<group>";
 		};
 		22B4ACAC262C1E1500B87217 = {
@@ -444,6 +469,9 @@
 				229BD28526347E59002CD21B /* ContentsTabView.swift in Sources */,
 				229BD28D26347F94002CD21B /* MissionHomeView.swift in Sources */,
 				22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */,
+				229BD2AF263542E0002CD21B /* CTAButtonStyle.swift in Sources */,
+				229BD2A126353887002CD21B /* StoreMapView.swift in Sources */,
+				229BD2A9263540CF002CD21B /* RegistStoreView.swift in Sources */,
 				229BD29B26351C72002CD21B /* MissionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

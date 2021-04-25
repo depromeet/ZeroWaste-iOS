@@ -50,12 +50,8 @@ struct MissionView: View {
                 Button(action: {
                 }, label: {
                     Text("참여하기")
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(Color.white)
-                        .padding()
                 })
-                .background(Color.blue)
-                .cornerRadius(.greatestFiniteMagnitude)
+                .buttonStyle(CTAButtonStyle())
                 .padding()
             }
 
