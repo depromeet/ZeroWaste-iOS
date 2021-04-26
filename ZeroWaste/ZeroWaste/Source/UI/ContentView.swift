@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+//<Model: ViewModelType>
 struct ContentView: View {
+    
+//    @EnvironmentObject var model: Model
+    
+    @State private var count: Int = 0
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-//        Image(ui)
+        Text("count: \(count)")
+        
+        Button("count up", action: {
+            count += 1
+        })
     }
 }
 
