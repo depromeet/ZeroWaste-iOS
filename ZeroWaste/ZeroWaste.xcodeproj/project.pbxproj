@@ -17,6 +17,7 @@
 		40256BD626342507007DE62D /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BD526342507007DE62D /* InitialView.swift */; };
 		40256BE52634294A007DE62D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE42634294A007DE62D /* LoginView.swift */; };
 		40256BEA26342953007DE62D /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE926342953007DE62D /* OnboardView.swift */; };
+		40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFA2022636D8310068BBB6 /* LoginViewModel.swift */; };
 		40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA9742634199400906DC5 /* ViewModelType.swift */; };
 		40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA97C26341A0500906DC5 /* InitialViewModel.swift */; };
 		712D11B7912D3F97C72EB834 /* Pods_ZeroWaste_ZeroWasteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74EA2B675E919167ACF2992 /* Pods_ZeroWaste_ZeroWasteUITests.framework */; };
@@ -57,6 +58,8 @@
 		40256BD526342507007DE62D /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		40256BE42634294A007DE62D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		40256BE926342953007DE62D /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		40EFA1F52636D6780068BBB6 /* ZeroWaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeroWaste.entitlements; sourceTree = "<group>"; };
+		40EFA2022636D8310068BBB6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		40FBA9742634199400906DC5 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		40FBA97C26341A0500906DC5 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		59284DE77EC50EED7CF9C4D4 /* Pods_ZeroWasteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWasteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,9 +127,10 @@
 		22B4ACB7262C1E1500B87217 /* ZeroWaste */ = {
 			isa = PBXGroup;
 			children = (
+				40EFA1F52636D6780068BBB6 /* ZeroWaste.entitlements */,
 				40FBA984263423E000906DC5 /* Source */,
 				40FBA982263423AE00906DC5 /* Resource */,
-				40FBA983263423C200906DC5 /* Suppoting */,
+				40FBA983263423C200906DC5 /* Supporting */,
 			);
 			indentWidth = 4;
 			path = ZeroWaste;
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				40256BE42634294A007DE62D /* LoginView.swift */,
+				40EFA2022636D8310068BBB6 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -199,13 +204,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		40FBA983263423C200906DC5 /* Suppoting */ = {
+		40FBA983263423C200906DC5 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
 				22B4ACBE262C1E1600B87217 /* Preview Content */,
 				22B4ACC1262C1E1600B87217 /* Info.plist */,
 			);
-			path = Suppoting;
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		40FBA984263423E000906DC5 /* Source */ = {
@@ -271,6 +276,8 @@
 			dependencies = (
 			);
 			name = ZeroWaste;
+			packageProductDependencies = (
+			);
 			productName = ZeroWaste;
 			productReference = 22B4ACB5262C1E1500B87217 /* ZeroWaste.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +352,8 @@
 				Base,
 			);
 			mainGroup = 22B4ACAC262C1E1500B87217;
+			packageReferences = (
+			);
 			productRefGroup = 22B4ACB6262C1E1500B87217 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -494,6 +503,7 @@
 				40256BE52634294A007DE62D /* LoginView.swift in Sources */,
 				22B4ACBB262C1E1600B87217 /* ContentView.swift in Sources */,
 				22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */,
+				40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */,
 				40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */,
 				40256BD626342507007DE62D /* InitialView.swift in Sources */,
 				40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */,
@@ -654,11 +664,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZeroWaste/ZeroWaste.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Suppoting/Preview Content\"";
-				DEVELOPMENT_TEAM = 97K6NR4M6U;
+				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Supporting/Preview Content\"";
+				DEVELOPMENT_TEAM = 85329TR25G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ZeroWaste/Suppoting/Info.plist;
+				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -677,11 +688,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZeroWaste/ZeroWaste.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Suppoting/Preview Content\"";
-				DEVELOPMENT_TEAM = 97K6NR4M6U;
+				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Supporting/Preview Content\"";
+				DEVELOPMENT_TEAM = 85329TR25G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ZeroWaste/Suppoting/Info.plist;
+				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
