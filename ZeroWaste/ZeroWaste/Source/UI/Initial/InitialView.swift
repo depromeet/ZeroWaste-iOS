@@ -18,7 +18,7 @@ struct InitialView: View {
         if isLoggedIn, isOnboardDone {
             ContentView()
         } else if !isOnboardDone, isLoggedIn {
-            OnboardView(done: $isOnboardDone)
+            ServiceIntroductionView(done: $isOnboardDone)
         } else {
             LoginView(loggedIn: $isLoggedIn)
         }

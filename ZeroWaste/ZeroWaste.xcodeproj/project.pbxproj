@@ -16,7 +16,8 @@
 		22B4ACD6262C1E1700B87217 /* ZeroWasteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4ACD5262C1E1700B87217 /* ZeroWasteUITests.swift */; };
 		40256BD626342507007DE62D /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BD526342507007DE62D /* InitialView.swift */; };
 		40256BE52634294A007DE62D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE42634294A007DE62D /* LoginView.swift */; };
-		40256BEA26342953007DE62D /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE926342953007DE62D /* OnboardView.swift */; };
+		40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE926342953007DE62D /* ServiceIntroductionView.swift */; };
+		40C71415263E5DA400AAB3E8 /* IntroduceServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C71414263E5DA400AAB3E8 /* IntroduceServiceView.swift */; };
 		40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFA2022636D8310068BBB6 /* LoginViewModel.swift */; };
 		40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA9742634199400906DC5 /* ViewModelType.swift */; };
 		40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA97C26341A0500906DC5 /* InitialViewModel.swift */; };
@@ -57,7 +58,8 @@
 		3C034AD7BC4460DD09EAB5ED /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		40256BD526342507007DE62D /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		40256BE42634294A007DE62D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		40256BE926342953007DE62D /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		40256BE926342953007DE62D /* ServiceIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroductionView.swift; sourceTree = "<group>"; };
+		40C71414263E5DA400AAB3E8 /* IntroduceServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceServiceView.swift; sourceTree = "<group>"; };
 		40EFA1F52636D6780068BBB6 /* ZeroWaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeroWaste.entitlements; sourceTree = "<group>"; };
 		40EFA2022636D8310068BBB6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		40FBA9742634199400906DC5 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -183,7 +185,8 @@
 		40256BD4263424E8007DE62D /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
-				40256BE926342953007DE62D /* OnboardView.swift */,
+				40256BE926342953007DE62D /* ServiceIntroductionView.swift */,
+				40C71414263E5DA400AAB3E8 /* IntroduceServiceView.swift */,
 			);
 			path = Onboard;
 			sourceTree = "<group>";
@@ -499,13 +502,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40256BEA26342953007DE62D /* OnboardView.swift in Sources */,
+				40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */,
 				40256BE52634294A007DE62D /* LoginView.swift in Sources */,
 				22B4ACBB262C1E1600B87217 /* ContentView.swift in Sources */,
 				22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */,
 				40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */,
 				40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */,
 				40256BD626342507007DE62D /* InitialView.swift in Sources */,
+				40C71415263E5DA400AAB3E8 /* IntroduceServiceView.swift in Sources */,
 				40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
