@@ -9,18 +9,21 @@ import SwiftUI
 
 struct InitialView: View {
     
-    // TODO: CoreData에 저장하고 꺼내와야 할 듯?
+    // TODO: CoreData나 userdefault에 저장하고 꺼내와야 할 듯?
     
     @State private var isLoggedIn: Bool = false
     @State private var isOnboardDone: Bool = false
+    let provider: ServiceProviderType = ServiceProvider()
     
     var body: some View {
         if isLoggedIn, isOnboardDone {
             ContentView()
         } else if !isOnboardDone, isLoggedIn {
-            ServiceIntroductionView(done: $isOnboardDone)
+            let viewModel: ServiceIntroductionViewModel = .init(provider: provider)
+            ServiceIntroductionView(viewModel: viewModel)
         } else {
-            LoginView(loggedIn: $isLoggedIn)
+            let viewModel: LoginViewModel = .init(provider: provider)
+            LoginView(viewModel: viewModel)
         }
     }
 }

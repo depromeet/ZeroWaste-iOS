@@ -33,8 +33,11 @@ struct LoginView: View {
     
     // MARK: Property
     
-    @Binding var loggedIn: Bool
-    @StateObject var loginData: LoginViewModel = .init()
+    @StateObject var viewModel: LoginViewModel
+    
+    init(viewModel: LoginViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 50, content:  {
@@ -91,10 +94,10 @@ extension LoginView {
                 case let .success(user):
                     // do login with Firebase
                     print("logged in \(user)")
-                    loggedIn.toggle()
+//                    loggedIn.toggle()
                 case let .failure(error):
                     print(error.localizedDescription)
-                    loggedIn.toggle()
+//                    loggedIn.toggle()
                 }   
             }
             .signInWithAppleButtonStyle(.black)
@@ -121,6 +124,6 @@ struct LoginView_Previews: PreviewProvider {
     @State static var loggedIn: Bool = false
     
     static var previews: some View {
-        LoginView(loggedIn: $loggedIn)
+        LoginView(viewModel: LoginViewModel(provider: ServiceProvider()))
     }
 }

@@ -1,13 +1,13 @@
 //
-//  LoginViewModel.swift
+//  MyCharacterViewModel.swift
 //  ZeroWaste
 //
-//  Created by 한상진 on 2021/04/26.
+//  Created by 한상진 on 2021/05/05.
 //
 
 import Foundation
 
-final class LoginViewModel: ObservableObject {
+final class MyCharacterViewModel: ObservableObject {
     @Published var someData: [Data] = []
     
     private let provider: ServiceProviderType

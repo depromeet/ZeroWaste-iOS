@@ -9,37 +9,65 @@ import SwiftUI
 
 struct ServiceIntroductionView: View {
     
-    @Binding var done: Bool
+    // MARK: Property
+//    @Binding var done: Bool
+    @StateObject var viewModel: ServiceIntroductionViewModel
+    
+    init(viewModel: ServiceIntroductionViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         NavigationView {
-            VStack {
-                Spacer()
-                
-                IntroduceServiceView()
-                IntroduceServiceView()
-                
-                Spacer()
-                
-                NavigationLink(
-                    destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
-                    label: {
-                        Button(action: { done.toggle() }) {
-                            Text("다음")
-                                .foregroundColor(.black)
-                        }
-                        .frame(
-                            width: UIScreen.main.bounds.width,
-                            height: 50
-                        )
-                        .border(Color.black, width: 1)
-                        .background(Color.gray)
-                    }
-                )
-            }
-            .navigationTitle("서비스 소개")
+            drawBody
         }
-        
+        .navigationViewStyle(StackNavigationViewStyle())
+    }
+}
+
+extension ServiceIntroductionView {
+    var drawBody: some View {
+        VStack {
+            Spacer()
+            drawIntroduceService                
+            Spacer()
+            drawIntroduceService            
+            Spacer()
+            drawNavigationLink
+        }
+        .navigationTitle("서비스 소개")
+    }
+    
+    var drawIntroduceService: some View {
+        HStack(alignment: .center, spacing: 10) {
+            
+            VStack {
+                Text("소개 명")
+                Text("소개글 작성")
+                
+                Spacer()
+            }
+            
+            Spacer()
+            
+            Image("icon_character_would_you")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 100)
+        }
+        .frame(height: 200)
+        .padding()
+        .border(Color.black, width: 1)
+        .padding([.horizontal], 10)
+    }
+    
+    var drawNavigationLink: some View {
+        NavigationLink(
+            destination: ResolutionView(viewModel: ResolutionViewModel(provider: viewModel.provider)),
+            label: {
+                NextButtonView()
+            }
+        )
     }
 }
 
@@ -47,6 +75,6 @@ struct OnboardView_Previews: PreviewProvider {
     @State static var loggedIn: Bool = false
     
     static var previews: some View {
-        ServiceIntroductionView(done: $loggedIn)
+        ServiceIntroductionView(viewModel: ServiceIntroductionViewModel(provider: ServiceProvider()))
     }
 }

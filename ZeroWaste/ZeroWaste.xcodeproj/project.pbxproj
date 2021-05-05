@@ -17,7 +17,13 @@
 		40256BD626342507007DE62D /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BD526342507007DE62D /* InitialView.swift */; };
 		40256BE52634294A007DE62D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE42634294A007DE62D /* LoginView.swift */; };
 		40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE926342953007DE62D /* ServiceIntroductionView.swift */; };
-		40C71415263E5DA400AAB3E8 /* IntroduceServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C71414263E5DA400AAB3E8 /* IntroduceServiceView.swift */; };
+		407EA4C3264240AA00276EF6 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C2264240AA00276EF6 /* ServiceProvider.swift */; };
+		407EA4C52642452B00276EF6 /* ServiceIntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */; };
+		407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */; };
+		407EA4C92642455000276EF6 /* MyCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */; };
+		40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C71418263E65EF00AAB3E8 /* ResolutionView.swift */; };
+		40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141A263E676300AAB3E8 /* NextButtonView.swift */; };
+		40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */; };
 		40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFA2022636D8310068BBB6 /* LoginViewModel.swift */; };
 		40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA9742634199400906DC5 /* ViewModelType.swift */; };
 		40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA97C26341A0500906DC5 /* InitialViewModel.swift */; };
@@ -59,7 +65,13 @@
 		40256BD526342507007DE62D /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		40256BE42634294A007DE62D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		40256BE926342953007DE62D /* ServiceIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroductionView.swift; sourceTree = "<group>"; };
-		40C71414263E5DA400AAB3E8 /* IntroduceServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceServiceView.swift; sourceTree = "<group>"; };
+		407EA4C2264240AA00276EF6 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroductionViewModel.swift; sourceTree = "<group>"; };
+		407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionViewModel.swift; sourceTree = "<group>"; };
+		407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterViewModel.swift; sourceTree = "<group>"; };
+		40C71418263E65EF00AAB3E8 /* ResolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionView.swift; sourceTree = "<group>"; };
+		40C7141A263E676300AAB3E8 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
+		40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterView.swift; sourceTree = "<group>"; };
 		40EFA1F52636D6780068BBB6 /* ZeroWaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeroWaste.entitlements; sourceTree = "<group>"; };
 		40EFA2022636D8310068BBB6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		40FBA9742634199400906DC5 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -185,10 +197,31 @@
 		40256BD4263424E8007DE62D /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
+				40C7141E263E767A00AAB3E8 /* Subview */,
 				40256BE926342953007DE62D /* ServiceIntroductionView.swift */,
-				40C71414263E5DA400AAB3E8 /* IntroduceServiceView.swift */,
+				407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */,
+				40C71418263E65EF00AAB3E8 /* ResolutionView.swift */,
+				407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */,
+				40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */,
+				407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */,
 			);
 			path = Onboard;
+			sourceTree = "<group>";
+		};
+		407EA4C12642409900276EF6 /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				407EA4C2264240AA00276EF6 /* ServiceProvider.swift */,
+			);
+			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		40C7141E263E767A00AAB3E8 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				40C7141A263E676300AAB3E8 /* NextButtonView.swift */,
+			);
+			path = Subview;
 			sourceTree = "<group>";
 		};
 		40FBA981263423A800906DC5 /* Application */ = {
@@ -220,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				40FBA981263423A800906DC5 /* Application */,
+				407EA4C12642409900276EF6 /* ServiceProvider */,
 				40FBA985263423EF00906DC5 /* UI */,
 			);
 			path = Source;
@@ -502,14 +536,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407EA4C3264240AA00276EF6 /* ServiceProvider.swift in Sources */,
 				40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */,
+				407EA4C92642455000276EF6 /* MyCharacterViewModel.swift in Sources */,
 				40256BE52634294A007DE62D /* LoginView.swift in Sources */,
 				22B4ACBB262C1E1600B87217 /* ContentView.swift in Sources */,
 				22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */,
+				40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */,
+				407EA4C52642452B00276EF6 /* ServiceIntroductionViewModel.swift in Sources */,
 				40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */,
+				40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */,
+				40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */,
+				407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */,
 				40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */,
 				40256BD626342507007DE62D /* InitialView.swift in Sources */,
-				40C71415263E5DA400AAB3E8 /* IntroduceServiceView.swift in Sources */,
 				40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
