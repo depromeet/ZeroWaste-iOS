@@ -14,6 +14,19 @@
 		22B4ACC0262C1E1600B87217 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B4ACBF262C1E1600B87217 /* Preview Assets.xcassets */; };
 		22B4ACCB262C1E1600B87217 /* ZeroWasteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4ACCA262C1E1600B87217 /* ZeroWasteTests.swift */; };
 		22B4ACD6262C1E1700B87217 /* ZeroWasteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4ACD5262C1E1700B87217 /* ZeroWasteUITests.swift */; };
+		40256BD626342507007DE62D /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BD526342507007DE62D /* InitialView.swift */; };
+		40256BE52634294A007DE62D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE42634294A007DE62D /* LoginView.swift */; };
+		40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE926342953007DE62D /* ServiceIntroductionView.swift */; };
+		407EA4C3264240AA00276EF6 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C2264240AA00276EF6 /* ServiceProvider.swift */; };
+		407EA4C52642452B00276EF6 /* ServiceIntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */; };
+		407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */; };
+		407EA4C92642455000276EF6 /* MyCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */; };
+		40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C71418263E65EF00AAB3E8 /* ResolutionView.swift */; };
+		40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141A263E676300AAB3E8 /* NextButtonView.swift */; };
+		40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */; };
+		40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFA2022636D8310068BBB6 /* LoginViewModel.swift */; };
+		40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA9742634199400906DC5 /* ViewModelType.swift */; };
+		40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA97C26341A0500906DC5 /* InitialViewModel.swift */; };
 		712D11B7912D3F97C72EB834 /* Pods_ZeroWaste_ZeroWasteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74EA2B675E919167ACF2992 /* Pods_ZeroWaste_ZeroWasteUITests.framework */; };
 		7F3807F1C67BF261164B0D89 /* Pods_ZeroWasteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59284DE77EC50EED7CF9C4D4 /* Pods_ZeroWasteTests.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +62,20 @@
 		22B4ACD5262C1E1700B87217 /* ZeroWasteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroWasteUITests.swift; sourceTree = "<group>"; };
 		22B4ACD7262C1E1700B87217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C034AD7BC4460DD09EAB5ED /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		40256BD526342507007DE62D /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		40256BE42634294A007DE62D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		40256BE926342953007DE62D /* ServiceIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroductionView.swift; sourceTree = "<group>"; };
+		407EA4C2264240AA00276EF6 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroductionViewModel.swift; sourceTree = "<group>"; };
+		407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionViewModel.swift; sourceTree = "<group>"; };
+		407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterViewModel.swift; sourceTree = "<group>"; };
+		40C71418263E65EF00AAB3E8 /* ResolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionView.swift; sourceTree = "<group>"; };
+		40C7141A263E676300AAB3E8 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
+		40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterView.swift; sourceTree = "<group>"; };
+		40EFA1F52636D6780068BBB6 /* ZeroWaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeroWaste.entitlements; sourceTree = "<group>"; };
+		40EFA2022636D8310068BBB6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		40FBA9742634199400906DC5 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		40FBA97C26341A0500906DC5 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		59284DE77EC50EED7CF9C4D4 /* Pods_ZeroWasteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWasteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7026233FBFA6BAE00AA5D687 /* Pods-ZeroWasteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWasteTests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWasteTests/Pods-ZeroWasteTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DFA54C7B1B1F103B5F44171 /* Pods-ZeroWasteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWasteTests.debug.xcconfig"; path = "Target Support Files/Pods-ZeroWasteTests/Pods-ZeroWasteTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,11 +141,10 @@
 		22B4ACB7262C1E1500B87217 /* ZeroWaste */ = {
 			isa = PBXGroup;
 			children = (
-				22B4ACB8262C1E1500B87217 /* ZeroWasteApp.swift */,
-				22B4ACBA262C1E1600B87217 /* ContentView.swift */,
-				22B4ACBC262C1E1600B87217 /* Assets.xcassets */,
-				22B4ACC1262C1E1600B87217 /* Info.plist */,
-				22B4ACBE262C1E1600B87217 /* Preview Content */,
+				40EFA1F52636D6780068BBB6 /* ZeroWaste.entitlements */,
+				40FBA984263423E000906DC5 /* Source */,
+				40FBA982263423AE00906DC5 /* Resource */,
+				40FBA983263423C200906DC5 /* Supporting */,
 			);
 			indentWidth = 4;
 			path = ZeroWaste;
@@ -149,6 +175,101 @@
 				22B4ACD7262C1E1700B87217 /* Info.plist */,
 			);
 			path = ZeroWasteUITests;
+			sourceTree = "<group>";
+		};
+		40256BD2263424BE007DE62D /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				40256BD526342507007DE62D /* InitialView.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		40256BD3263424C6007DE62D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				40256BE42634294A007DE62D /* LoginView.swift */,
+				40EFA2022636D8310068BBB6 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		40256BD4263424E8007DE62D /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				40C7141E263E767A00AAB3E8 /* Subview */,
+				40256BE926342953007DE62D /* ServiceIntroductionView.swift */,
+				407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */,
+				40C71418263E65EF00AAB3E8 /* ResolutionView.swift */,
+				407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */,
+				40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */,
+				407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		407EA4C12642409900276EF6 /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				407EA4C2264240AA00276EF6 /* ServiceProvider.swift */,
+			);
+			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		40C7141E263E767A00AAB3E8 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				40C7141A263E676300AAB3E8 /* NextButtonView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		40FBA981263423A800906DC5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				22B4ACB8262C1E1500B87217 /* ZeroWasteApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		40FBA982263423AE00906DC5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				22B4ACBC262C1E1600B87217 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		40FBA983263423C200906DC5 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				22B4ACBE262C1E1600B87217 /* Preview Content */,
+				22B4ACC1262C1E1600B87217 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		40FBA984263423E000906DC5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				40FBA981263423A800906DC5 /* Application */,
+				407EA4C12642409900276EF6 /* ServiceProvider */,
+				40FBA985263423EF00906DC5 /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		40FBA985263423EF00906DC5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				40256BD2263424BE007DE62D /* Initial */,
+				40256BD3263424C6007DE62D /* Login */,
+				40256BD4263424E8007DE62D /* Onboard */,
+				22B4ACBA262C1E1600B87217 /* ContentView.swift */,
+				40FBA97C26341A0500906DC5 /* InitialViewModel.swift */,
+				40FBA9742634199400906DC5 /* ViewModelType.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		4470265B44AEE0AD167A4B65 /* Frameworks */ = {
@@ -192,6 +313,8 @@
 			dependencies = (
 			);
 			name = ZeroWaste;
+			packageProductDependencies = (
+			);
 			productName = ZeroWaste;
 			productReference = 22B4ACB5262C1E1500B87217 /* ZeroWaste.app */;
 			productType = "com.apple.product-type.application";
@@ -266,6 +389,8 @@
 				Base,
 			);
 			mainGroup = 22B4ACAC262C1E1500B87217;
+			packageReferences = (
+			);
 			productRefGroup = 22B4ACB6262C1E1500B87217 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -411,8 +536,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407EA4C3264240AA00276EF6 /* ServiceProvider.swift in Sources */,
+				40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */,
+				407EA4C92642455000276EF6 /* MyCharacterViewModel.swift in Sources */,
+				40256BE52634294A007DE62D /* LoginView.swift in Sources */,
 				22B4ACBB262C1E1600B87217 /* ContentView.swift in Sources */,
 				22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */,
+				40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */,
+				407EA4C52642452B00276EF6 /* ServiceIntroductionViewModel.swift in Sources */,
+				40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */,
+				40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */,
+				40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */,
+				407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */,
+				40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */,
+				40256BD626342507007DE62D /* InitialView.swift in Sources */,
+				40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,11 +708,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZeroWaste/ZeroWaste.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Preview Content\"";
-				DEVELOPMENT_TEAM = 97K6NR4M6U;
+				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Supporting/Preview Content\"";
+				DEVELOPMENT_TEAM = 85329TR25G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ZeroWaste/Info.plist;
+				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,11 +732,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZeroWaste/ZeroWaste.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Preview Content\"";
-				DEVELOPMENT_TEAM = 97K6NR4M6U;
+				DEVELOPMENT_ASSET_PATHS = "\"ZeroWaste/Supporting/Preview Content\"";
+				DEVELOPMENT_TEAM = 85329TR25G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ZeroWaste/Info.plist;
+				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
