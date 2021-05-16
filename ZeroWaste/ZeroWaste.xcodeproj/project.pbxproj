@@ -143,13 +143,6 @@
 			path = StyleGuide;
 			sourceTree = "<group>";
 		};
-		229BD28326347DDB002CD21B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		229BD2912634FB49002CD21B /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +199,6 @@
 				40FBA984263423E000906DC5 /* Source */,
 				40FBA982263423AE00906DC5 /* Resource */,
 				40FBA983263423C200906DC5 /* Supporting */,
-				229BD28326347DDB002CD21B /* View */,
 			);
 			indentWidth = 4;
 			path = ZeroWaste;
