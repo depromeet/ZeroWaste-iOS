@@ -30,7 +30,8 @@ struct MissionCell: View {
             Text("기간")
         }
         .padding()
-        .border(Color.black, width: 4)
+        .background(Color(UIColor.systemGroupedBackground))
+        .cornerRadius(16)
     }
 }
 
@@ -38,7 +39,7 @@ struct MissionCell_Previews: PreviewProvider {
     static var previews: some View {
 //        ForEach(ColorScheme.allCases, id: \.self) {
             MissionCell()
-                .previewLayout(.fixed(width: 136, height: 148))
+                .previewLayout(.fixed(width: 339, height: 127))
 //                .preferredColorScheme($0)
 //        }
 

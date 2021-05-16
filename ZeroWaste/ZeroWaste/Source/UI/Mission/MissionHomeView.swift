@@ -31,20 +31,23 @@ struct MissionHomeView: View {
 
                 // MARK: '참여 가능 미션' Section
 
-                Text("참여 가능한 미션")
-                    .font(.title2)
-                    .bold()
+                Group {
+                    Text("참여 가능한 미션")
+                        .font(.title2)
+                        .bold()
 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack {
-                        ForEach(0..<10) { _ in
-                            NavigationLink(destination: MissionView()) {
-                                MissionCell()
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVStack {
+                            ForEach(0..<10) { _ in
+                                NavigationLink(destination: MissionView()) {
+                                    MissionCell()
+                                }
                             }
                         }
+                        //                    .frame(height: 150)
                     }
-                    .frame(height: 150)
                 }
+                .padding(.horizontal)
 
 
                 Button(action: {
