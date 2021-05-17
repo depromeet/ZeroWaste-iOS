@@ -25,7 +25,7 @@ enum HTTPMethod: String {
 }
 
 enum Network {
-    static let baseURL: String = "https://18.217.57.135:8000/api" 
+    static let baseURL: String = "http://18.217.57.135:8000/api" 
 }
 
 enum HTTPHeaderFields {
