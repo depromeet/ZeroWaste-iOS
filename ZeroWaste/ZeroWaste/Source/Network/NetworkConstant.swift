@@ -11,14 +11,15 @@ typealias HTTPHeaders = [String: String]
 typealias Parameters = [String: Any?]
 
 enum HTTPTask {
-    case requestHeader(urlParams: Parameters)
-    case requestBody(json: Parameters)
     case none
+    case requestHeader(urlParams: Parameters)
+    case requestBody(json: Any)
 }
 
 enum HTTPMethod: String {
     case get = "GET"
     case put = "PUT"
+    case post = "POST"
     case patch = "PATCH"
     case delete = "DELETE" 
 }
@@ -34,6 +35,9 @@ enum HTTPHeaderFields {
     static let acceptEncoding: String = "Accept-Encoding"
     static let contentType: String = "Content-Type"
     
+    static let token: String = "X-CSRFToken"
+    static let tokenKey: String = "XgeBBKXeSdI7KOcNLsPDpPDSkXUdTi6IhMDuIHOT0ghkrGr49k0QStfmA2vuh5NT"
+    
     enum ContentType {
         static let json: String = "application/json"
     }
@@ -41,9 +45,13 @@ enum HTTPHeaderFields {
 }
 
 enum NetworkError: Error {
-    case unknown
-    case unableToMakeURLRequest
     case noData
+    case unknown
+    
+    case unableToMakeURLRequest
+    case jsonEncoding
+    case parameterEncoding
+    
     case unableToDecode
     case HTTPURLResponse
     case invalidConnection

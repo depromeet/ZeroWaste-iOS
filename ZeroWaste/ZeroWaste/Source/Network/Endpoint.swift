@@ -18,6 +18,9 @@ protocol EndpointType {
 
 enum Endpoint {
     // MARK: Auth
+    case postAuth(token: JSONWebToken)
+    case postKakaoAuth(token: KakaoLoginToken)
+    case postRefreshAuth(token: RefreshJSONWebToken)
     
     // MARK: Users
     // TODO: 네이밍 어떻게 해야할지 잘 모르겠습니다!
@@ -36,8 +39,18 @@ extension Endpoint: EndpointType {
     
     var path: String {
         switch self {
+        case .postAuth:
+            return "/jwt-auth"
+            
+        case .postKakaoAuth:
+            return "/jwt-auth/kakao"
+            
+        case .postRefreshAuth:
+            return "/jwt-auth/refresh"
+        
         case .getUserList:
             return "/users"
+            
         case .getUser(let id), .putUser(let id), .patchUser(let id), .deleteUser(let id):
             return "/users/\(id)"
         }
@@ -50,6 +63,9 @@ extension Endpoint: EndpointType {
             
         case .patchUser:
             return .patch
+            
+        case .postAuth, .postKakaoAuth, .postRefreshAuth:
+            return .post
             
         case .putUser:
             return .put
@@ -70,6 +86,15 @@ extension Endpoint: EndpointType {
         case .patchUser(let id):
             return .requestBody(json: ["id": id])
             
+        case .postAuth(let token):
+            return .requestBody(json: token)
+            
+        case .postKakaoAuth(let token):
+            return .requestBody(json: token)
+            
+        case .postRefreshAuth(let token):
+            return .requestBody(json: token)
+            
         case .deleteUser:
             // TODO: Auth 다시 확인
             return .requestHeader(urlParams: ["Authorization": "something"])
@@ -79,8 +104,8 @@ extension Endpoint: EndpointType {
     var headers: HTTPHeaders? {
         return [
             HTTPHeaderFields.acceptType: HTTPHeaderFields.ContentType.json,
-            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json,
-            HTTPHeaderFields.authorization: "인증"
+//            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json,
+            HTTPHeaderFields.token: HTTPHeaderFields.tokenKey
         ]
     }
     
@@ -96,12 +121,10 @@ extension Endpoint: EndpointType {
         
         switch self.task {
         case .requestHeader(let urlParams):
-            // parameter encode
-            break
+            try encodeHeader(&request, with: urlParams)
             
         case .requestBody(let json):
-            // body encode
-            break
+            try encodeBody(&request, with: json)
         
         case .none:
             break
@@ -110,7 +133,34 @@ extension Endpoint: EndpointType {
         return request
     }
     
-//    private func configurePrameters(with parameter: Parameters, request: inout URLRequest) throws {
-//        
-//    }
+    private func encodeHeader(_ request: inout URLRequest, with parameter: Parameters?) throws {
+        guard let parameter = parameter else { return }
+        guard let url = request.url else { throw NetworkError.parameterEncoding }
+        
+        if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
+           !parameter.isEmpty {
+            urlComponents.queryItems = [URLQueryItem]()
+            
+            for (key, value) in parameter.compactMapValues({ $0 }) {
+                let queryItem = URLQueryItem(name: key, value: "\(value)")
+                
+                urlComponents.queryItems?.append(queryItem)
+            }
+            
+            request.url = urlComponents.url
+        }
+    }
+    
+    private func encodeBody(_ request: inout URLRequest, with parameter: Any?) throws {
+        guard let parameter = parameter else { return }
+        
+        do {
+            // TODO: option이 필요한가요 ?
+            let data = try JSONSerialization.data(withJSONObject: parameter, options: [])
+            
+            request.httpBody = data
+        } catch {
+            throw NetworkError.jsonEncoding
+        }
+    }
 }
