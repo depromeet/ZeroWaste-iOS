@@ -13,19 +13,18 @@ struct FeedProfileView: View {
             Image(systemName: "infinity.circle")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 44, height: 44, alignment: .top)
+                .frame(width: 28, height: 28, alignment: .top)
 
             Spacer()
-                .frame(width: 16)
-            VStack(alignment: .leading) {
-                Text("닉네임")
-                    .bold()
-                Text("nn번 인증 완료")
-                    .font(.caption)
-            }
+                .frame(width: 12)
+
+            Text("{닉네임}")
+                .font(.system(14, .bold))
+                .bold()
+
             Spacer()
-            Text("주전자 물끓이기 미션 >")
-                .font(.caption)
+            Text("{미션명 (~~하러 가기)} >")
+                .font(.system(14, .bold))
         }
         .padding(.horizontal)
     }

@@ -16,15 +16,19 @@ struct MissionHomeView: View {
                 Text("진행중인 미션")
                     .font(.title2)
                     .bold()
+                    .padding(.horizontal)
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
-                        ForEach(0..<10) { _ in
+                        ForEach(0..<3) { _ in
                             NavigationLink(destination: MissionView()) {
                                 MissionCell()
                             }
+                            .buttonStyle(PlainButtonStyle())
                         }
+
                     }
+                    .padding(.horizontal)
                     .frame(height: 150)
                 }
                 .padding(.bottom)
@@ -42,6 +46,7 @@ struct MissionHomeView: View {
                                 NavigationLink(destination: MissionView()) {
                                     MissionCell()
                                 }
+                                .buttonStyle(PlainButtonStyle())
                             }
                         }
                         //                    .frame(height: 150)
@@ -69,6 +74,8 @@ struct MissionHomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MissionHomeView()
+                .navigationTitle("{미션}")
+
         }
     }
 }

@@ -12,20 +12,42 @@ struct FeedView: View {
         VStack(alignment: .leading) {
             FeedProfileView()
 
-            Image(systemName: "photo")
-                .resizable()
-                .aspectRatio(1, contentMode: .fit)
-                .frame(maxWidth: .infinity)
-                .background(Color.gray)
+            ZStack(alignment: .topLeading) {
+                Image(systemName: "photo")
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(maxWidth: .infinity)
+                    .cornerRadius(16)
 
-            VStack(alignment: .leading) {
-                Button(action: {}, label: {
-                    Label("공감 n", systemImage: "heart")
-                })
+                HStack {
+                    CategoryCell()
+                    CategoryCell()
+                }
+                .padding()
 
-                Text("체감 난이도 쉬움")
+            }
+            .padding(.horizontal)
 
-                Text("#아주긴해시태그😀동해물과백두산이마르고닳도록하느님이보우하사우리나라만세무궁화삼천리화려강산대한사람대한으로길이보전하세아주긴해시태그동해물과백두산이마르고닳도록하느님이보우하사우리나라만세무궁화삼천리화려강산대한사람대한으로길이보전하세")
+            VStack(alignment: .leading, spacing: 6) {
+                HStack {
+                    Text("{카페에서 | 만족}")
+                        .font(.system(14, .bold))
+
+                    Spacer()
+
+                    Button(action: {}, label: {
+                        Label("공감 n", systemImage: "heart")
+                            .font(.system(11, .regular))
+                    })
+                    .padding(.vertical, 8)
+                }
+
+
+                Text("{혼자 자취를 하다보니 생수병을 매번 사먹었는데, 지금은 열심히 끓여 먹고 있어요~ 처음엔 어려웠는데  하다보니 사먹는 것 보다 좋아요! 여러분도 꼭 성공하세요!}")
+                    .font(.system(14, .regular))
+
+                Text("{2021. 5. 1}")
+                    .font(.system(14, .regular))
             }
             .padding(.horizontal)
 

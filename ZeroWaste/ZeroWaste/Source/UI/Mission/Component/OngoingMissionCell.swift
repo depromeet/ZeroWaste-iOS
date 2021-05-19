@@ -1,13 +1,13 @@
 //
-//  MissionCell.swift
+//  OngoingMissionCell.swift
 //  ZeroWaste
 //
-//  Created by Tim on 2021/04/25.
+//  Created by Tim on 2021/05/19.
 //
 
 import SwiftUI
 
-struct MissionCell: View {
+struct OngoingMissionCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
@@ -22,21 +22,12 @@ struct MissionCell: View {
                 // MARK: 미션 주제 / 참가인원
                 VStack(alignment: .leading, spacing: 8) {
                     Text("{수돗물 끓여 마시기}")
-                        .font(.system(18, .heavy))
-                        .lineLimit(2)
+                        .font(.headline)
+                        .lineLimit(1)
 
-                    HStack {
-                        Image("iconPerson")
+                    Text("미션 인증까지 3일 남았어요")
+                        .font(.caption)
 
-                        Text("{푸른지구}")
-                            .font(.system(13, .regular))
-
-                        Divider()
-                            .frame(height: 10)
-
-                        Text("{2,431명}")
-                            .font(.system(13, .regular))
-                    }
                 }
                 Spacer()
             }
@@ -49,25 +40,30 @@ struct MissionCell: View {
                 CategoryCell()
                 CategoryCell()
                 Spacer()
-                Image("iconHeart")
-                    .renderingMode(.template)
-                    .foregroundColor(.blue)
-                    .padding(.vertical, 6)
+
+                Button(action: {}) {
+                    Text("인증하기")
+                        .font(.subheadline)
+                        .foregroundColor(.label)
+                        .bold()
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 24)
+                        .background(Color.green)
+                        .cornerRadius(8)
+                }
             }
         }
         .padding()
         .background(Color(UIColor.systemGroupedBackground))
         .cornerRadius(16)
+        .shadow(radius: 10)
+        
     }
 }
 
-struct MissionCell_Previews: PreviewProvider {
+struct OngoingMissionCell_Previews: PreviewProvider {
     static var previews: some View {
-//        ForEach(ColorScheme.allCases, id: \.self) {
-            MissionCell()
-                .previewLayout(.sizeThatFits)
-//                .preferredColorScheme($0)
-//        }
-
+        OngoingMissionCell()
+            .previewLayout(.sizeThatFits)
     }
 }
