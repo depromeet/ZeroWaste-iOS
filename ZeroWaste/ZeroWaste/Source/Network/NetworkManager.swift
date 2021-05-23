@@ -20,8 +20,6 @@ final class NetworkManager: NetworkManagerType {
             return Fail(error: NetworkError.unableToMakeURLRequest).eraseToAnyPublisher() 
         }
         
-        print(request)
-        
         return session
             .dataTaskPublisher(for: request)
             .receive(on: DispatchQueue.main)

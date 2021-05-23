@@ -50,7 +50,7 @@ extension Endpoint: EndpointType {
         
         case .getUserList:
             return "/users"
-            
+        
         case .getUser(let id), .putUser(let id), .patchUser(let id), .deleteUser(let id):
             return "/users/\(id)"
         }
@@ -104,8 +104,9 @@ extension Endpoint: EndpointType {
     var headers: HTTPHeaders? {
         return [
             HTTPHeaderFields.acceptType: HTTPHeaderFields.ContentType.json,
-//            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json,
-            HTTPHeaderFields.token: HTTPHeaderFields.tokenKey
+            HTTPHeaderFields.token: HTTPHeaderFields.tokenKey,
+            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json,
+            HTTPHeaderFields.authorization: "인증"
         ]
     }
     
