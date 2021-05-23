@@ -21,6 +21,14 @@
 		407EA4C52642452B00276EF6 /* ServiceIntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */; };
 		407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */; };
 		407EA4C92642455000276EF6 /* MyCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */; };
+		4080DAED2651F9B100E2878F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAEC2651F9B100E2878F /* NetworkManager.swift */; };
+		4080DAEF2651F9E500E2878F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAEE2651F9E500E2878F /* Endpoint.swift */; };
+		4080DAF12651F9EC00E2878F /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAF02651F9EC00E2878F /* NetworkConstant.swift */; };
+		4080DAF426520FF700E2878F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAF326520FF700E2878F /* User.swift */; };
+		4080DAF6265224C900E2878F /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAF5265224C900E2878F /* Auth.swift */; };
+		4087CA86265A7747006016D3 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087CA85265A7747006016D3 /* Mission.swift */; };
+		4087CA88265A79CF006016D3 /* Certification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087CA87265A79CF006016D3 /* Certification.swift */; };
+		4087CA8A265A7B42006016D3 /* BlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087CA89265A7B42006016D3 /* BlockList.swift */; };
 		40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C71418263E65EF00AAB3E8 /* ResolutionView.swift */; };
 		40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141A263E676300AAB3E8 /* NextButtonView.swift */; };
 		40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */; };
@@ -69,6 +77,14 @@
 		407EA4C42642452B00276EF6 /* ServiceIntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroductionViewModel.swift; sourceTree = "<group>"; };
 		407EA4C62642453E00276EF6 /* ResolutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionViewModel.swift; sourceTree = "<group>"; };
 		407EA4C82642455000276EF6 /* MyCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterViewModel.swift; sourceTree = "<group>"; };
+		4080DAEC2651F9B100E2878F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4080DAEE2651F9E500E2878F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4080DAF02651F9EC00E2878F /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		4080DAF326520FF700E2878F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4080DAF5265224C900E2878F /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		4087CA85265A7747006016D3 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		4087CA87265A79CF006016D3 /* Certification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certification.swift; sourceTree = "<group>"; };
+		4087CA89265A7B42006016D3 /* BlockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockList.swift; sourceTree = "<group>"; };
 		40C71418263E65EF00AAB3E8 /* ResolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionView.swift; sourceTree = "<group>"; };
 		40C7141A263E676300AAB3E8 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
 		40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterView.swift; sourceTree = "<group>"; };
@@ -216,6 +232,29 @@
 			path = ServiceProvider;
 			sourceTree = "<group>";
 		};
+		4080DAEB2651F9A400E2878F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4080DAF226520FDD00E2878F /* Models */,
+				4080DAF02651F9EC00E2878F /* NetworkConstant.swift */,
+				4080DAEE2651F9E500E2878F /* Endpoint.swift */,
+				4080DAEC2651F9B100E2878F /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4080DAF226520FDD00E2878F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4080DAF326520FF700E2878F /* User.swift */,
+				4080DAF5265224C900E2878F /* Auth.swift */,
+				4087CA85265A7747006016D3 /* Mission.swift */,
+				4087CA87265A79CF006016D3 /* Certification.swift */,
+				4087CA89265A7B42006016D3 /* BlockList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		40C7141E263E767A00AAB3E8 /* Subview */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +291,7 @@
 		40FBA984263423E000906DC5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4080DAEB2651F9A400E2878F /* Network */,
 				40FBA981263423A800906DC5 /* Application */,
 				407EA4C12642409900276EF6 /* ServiceProvider */,
 				40FBA985263423EF00906DC5 /* UI */,
@@ -540,17 +580,25 @@
 				40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */,
 				407EA4C92642455000276EF6 /* MyCharacterViewModel.swift in Sources */,
 				40256BE52634294A007DE62D /* LoginView.swift in Sources */,
+				4087CA88265A79CF006016D3 /* Certification.swift in Sources */,
+				4080DAED2651F9B100E2878F /* NetworkManager.swift in Sources */,
 				22B4ACBB262C1E1600B87217 /* ContentView.swift in Sources */,
 				22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */,
+				4087CA8A265A7B42006016D3 /* BlockList.swift in Sources */,
 				40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */,
 				407EA4C52642452B00276EF6 /* ServiceIntroductionViewModel.swift in Sources */,
 				40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */,
 				40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */,
 				40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */,
+				4087CA86265A7747006016D3 /* Mission.swift in Sources */,
 				407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */,
 				40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */,
 				40256BD626342507007DE62D /* InitialView.swift in Sources */,
+				4080DAF6265224C900E2878F /* Auth.swift in Sources */,
+				4080DAEF2651F9E500E2878F /* Endpoint.swift in Sources */,
+				4080DAF12651F9EC00E2878F /* NetworkConstant.swift in Sources */,
 				40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */,
+				4080DAF426520FF700E2878F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
