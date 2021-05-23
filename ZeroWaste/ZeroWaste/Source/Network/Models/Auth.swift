@@ -14,7 +14,7 @@ struct JSONWebToken: Codable {
 
 struct KakaoLoginToken: Codable {
     let kakaoAccessToken: String
-    let email: String
+    let email: String?
     
     enum CodingKeys: String, CodingKey {
         case kakaoAccessToken = "kakao_access_token"

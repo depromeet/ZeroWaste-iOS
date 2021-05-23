@@ -8,11 +8,11 @@
 import Foundation
 
 struct User: Codable {
-    let id: Int
+    let id: Int?
     let nickname: String
-    let level: Int
-    let reportedCounts: Int
-    let isNotify: Bool
+    let level: Int?
+    let reportedCounts: Int?
+    let isNotify: Bool?
     
     enum CodingKeys: String, CodingKey {
         case id

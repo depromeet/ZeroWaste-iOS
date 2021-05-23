@@ -26,6 +26,9 @@
 		4080DAF12651F9EC00E2878F /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAF02651F9EC00E2878F /* NetworkConstant.swift */; };
 		4080DAF426520FF700E2878F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAF326520FF700E2878F /* User.swift */; };
 		4080DAF6265224C900E2878F /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080DAF5265224C900E2878F /* Auth.swift */; };
+		4087CA86265A7747006016D3 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087CA85265A7747006016D3 /* Mission.swift */; };
+		4087CA88265A79CF006016D3 /* Certification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087CA87265A79CF006016D3 /* Certification.swift */; };
+		4087CA8A265A7B42006016D3 /* BlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087CA89265A7B42006016D3 /* BlockList.swift */; };
 		40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C71418263E65EF00AAB3E8 /* ResolutionView.swift */; };
 		40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141A263E676300AAB3E8 /* NextButtonView.swift */; };
 		40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */; };
@@ -79,6 +82,9 @@
 		4080DAF02651F9EC00E2878F /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		4080DAF326520FF700E2878F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4080DAF5265224C900E2878F /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		4087CA85265A7747006016D3 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		4087CA87265A79CF006016D3 /* Certification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certification.swift; sourceTree = "<group>"; };
+		4087CA89265A7B42006016D3 /* BlockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockList.swift; sourceTree = "<group>"; };
 		40C71418263E65EF00AAB3E8 /* ResolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionView.swift; sourceTree = "<group>"; };
 		40C7141A263E676300AAB3E8 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
 		40C7141C263E765B00AAB3E8 /* MyCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCharacterView.swift; sourceTree = "<group>"; };
@@ -242,6 +248,9 @@
 			children = (
 				4080DAF326520FF700E2878F /* User.swift */,
 				4080DAF5265224C900E2878F /* Auth.swift */,
+				4087CA85265A7747006016D3 /* Mission.swift */,
+				4087CA87265A79CF006016D3 /* Certification.swift */,
+				4087CA89265A7B42006016D3 /* BlockList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -571,14 +580,17 @@
 				40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */,
 				407EA4C92642455000276EF6 /* MyCharacterViewModel.swift in Sources */,
 				40256BE52634294A007DE62D /* LoginView.swift in Sources */,
+				4087CA88265A79CF006016D3 /* Certification.swift in Sources */,
 				4080DAED2651F9B100E2878F /* NetworkManager.swift in Sources */,
 				22B4ACBB262C1E1600B87217 /* ContentView.swift in Sources */,
 				22B4ACB9262C1E1600B87217 /* ZeroWasteApp.swift in Sources */,
+				4087CA8A265A7B42006016D3 /* BlockList.swift in Sources */,
 				40C71419263E65EF00AAB3E8 /* ResolutionView.swift in Sources */,
 				407EA4C52642452B00276EF6 /* ServiceIntroductionViewModel.swift in Sources */,
 				40EFA2032636D8310068BBB6 /* LoginViewModel.swift in Sources */,
 				40C7141D263E765B00AAB3E8 /* MyCharacterView.swift in Sources */,
 				40C7141B263E676300AAB3E8 /* NextButtonView.swift in Sources */,
+				4087CA86265A7747006016D3 /* Mission.swift in Sources */,
 				407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */,
 				40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */,
 				40256BD626342507007DE62D /* InitialView.swift in Sources */,
