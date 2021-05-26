@@ -90,3 +90,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 .DS_Store
+.DS_Store
+ZeroWaste/ZeroWaste.xcworkspace
+ZeroWaste/ZeroWaste.xcodeproj
