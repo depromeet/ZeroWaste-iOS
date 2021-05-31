@@ -6,28 +6,10 @@
 //
 
 import SwiftUI
+import Combine
 import KakaoSDKAuth
 import KakaoSDKUser
 import AuthenticationServices
-
-struct AppleUser: Codable {
-    let userID: String
-    let firstName: String
-    let lastName: String
-    let email: String
-    
-    init?(credentials: ASAuthorizationAppleIDCredential) {
-        guard let firstName = credentials.fullName?.givenName,
-              let lastName = credentials.fullName?.familyName,
-              let email = credentials.email
-        else { return nil }
-        
-        self.userID = credentials.user
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-    }
-}
 
 struct LoginView: View {
     
@@ -35,74 +17,59 @@ struct LoginView: View {
     
     // TODO: .localized
     private enum Texts {
-        static let kakao: String = "KakaoTalk Login" 
-        static let apple: String = "Apple Login"
-        static let find: String = "id/pw find"
-    }
-    
-    private enum Colors {
-        static let yellow: Color = .yellow
-        static let black: Color = .black
+        static let kakao: String = "카카오로 로그인" 
     }
     
     private enum Metrics {
         static let buttonWidth: CGFloat = UIScreen.main.bounds.width * 0.8
         static let buttonHeight: CGFloat = 60
-        static let cornerRadius: CGFloat = 8
+        static let cornerRadius: CGFloat = 6
     }
-    
-    @Environment(\.colorScheme) var colorScheme
-    @State var test: String = "테스트" 
-    
-    // TODO: 다른데서도 쓰일 듯
-    private enum LoginType {
-        case kakao
-        case apple
-    }
-    
+        
     // MARK: Property
     
     @StateObject var viewModel: LoginViewModel
+    
+    // MARK: Init
     
     init(viewModel: LoginViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
+    // MARK: Body
+    
     var body: some View {
-        VStack(alignment: .center, spacing: 50, content:  {
+        ZStack {
+            Color(.sRGB, red: 0.094, green: 0.137, blue: 0.306, opacity: 1)
+                .ignoresSafeArea()
             
-            Text(self.test)
-            drawCircleImage
-            drawLoginVStack
-            drawFindButton
-            
-            Spacer()
-                .frame(
-                    width: 0,
-                    height: 50,
-                    alignment: .center
-                )
-        })
+            VStack(alignment: .center, spacing: 58, content:  {
+                loginIntroductionTitle
+                loginIntroductionDescription
+                
+                Spacer().frame(height: 38)
+                
+                loginVStack
+            })
+        }
     }
 }
 
 // MARK: UI Methods
 
 extension LoginView {
-    private var drawCircleImage: some View {
-        let circleSize: CGFloat = UIScreen.main.bounds.width / 2 
-        
-        return Circle()
-            .stroke()
-            .frame(
-                width: circleSize, 
-                height: circleSize, 
-                alignment: .center
-            )
+    private var loginIntroductionTitle: some View {
+        Text("제로웨이스트 습관 형성 앱")
+            .foregroundColor(.white)
     }
     
-    private var drawLoginVStack: some View {
-        return VStack(alignment: .center, spacing: 10, content: {
+    private var loginIntroductionDescription: some View {
+        Text("zero would you?")
+            .foregroundColor(.white)
+    }
+    
+    private var loginVStack: some View {
+        return VStack(alignment: .center, spacing: 15, content: {
             kakaoLoginButton
             appleLoginButton
         })
@@ -110,13 +77,14 @@ extension LoginView {
     
     private var kakaoLoginButton: some View {
         Button(Texts.kakao, action: kakaoLogin)
+            .font(.custom("Apple SD Gothic Neo", size: 16))
             .frame(
                 width: Metrics.buttonWidth, 
                 height: Metrics.buttonHeight, 
                 alignment: .center
             )
-            .background(Colors.yellow)
-            .foregroundColor(Colors.black)
+            .background(Color(red: 1.0, green: 0.9, blue: 0.0))
+            .foregroundColor(.black)
             .cornerRadius(Metrics.cornerRadius)
     }
     
@@ -126,19 +94,12 @@ extension LoginView {
             onRequest: configure,
             onCompletion: handle
         )
-        .signInWithAppleButtonStyle(
-            colorScheme == .dark ? .white : .black
-        )
+        .signInWithAppleButtonStyle(.black)
         .frame(
             width: Metrics.buttonWidth, 
             height: Metrics.buttonHeight, 
             alignment: .center
         )
-    }
-    
-    private var drawFindButton: some View {
-        return Button(Texts.find, action: { })
-            .font(.system(size: 20))
     }
 }
 
@@ -151,13 +112,16 @@ extension LoginView {
         
         UserApi.shared.loginWithKakaoTalk { oauthToken, error in
             guard error.isNone else { 
+                // TODO: 에러 표시로 변경
                 print(String(describing: error))
                 return
             }
             
-            print("토큰 \(String(describing: oauthToken))")
-            
-            self.test = "토큰 \(String(describing: oauthToken))"
+            if let oauthToken = oauthToken {
+                print(oauthToken)
+                
+                self.viewModel.apply(.kakaoLogin(token: oauthToken))    
+            }
         }
     }
     
@@ -180,6 +144,8 @@ extension LoginView {
                     UserDefaults.standard.setValue(appleUserData, forKey: appleUser.userID)
                     
                     print("saved apple user", appleUser)
+                    
+                    viewModel.apply(.appleLogin(token: appleUser))
                 } else {
                     print("missing some fields", appleIdCredentials.user)
                     
@@ -188,12 +154,18 @@ extension LoginView {
                     else { return }
                     
                     print(appleUser)
+                    
+                    viewModel.apply(.appleLogin(token: appleUser))
                 }
+                
+                
             default:
-                print(auth.credential)
+                print(auth)
+                // TODO: 여기서도 에러 보내야하는가?
             }
             
         case let .failure(error):
+            // TODO: 에러 표시로 변경
             print(error)
         }
     }

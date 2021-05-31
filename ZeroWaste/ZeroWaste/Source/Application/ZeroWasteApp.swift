@@ -18,7 +18,7 @@ struct ZeroWasteApp: App {
     
     var body: some Scene {
         WindowGroup {
-            InitialView()
+            LoadingView()
                 .onOpenURL(perform: { url in
                     if (AuthApi.isKakaoTalkLoginUrl(url)) {
                         _ = AuthController.handleOpenUrl(url: url)

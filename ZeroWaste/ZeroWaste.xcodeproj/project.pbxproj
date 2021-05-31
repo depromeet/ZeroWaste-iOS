@@ -16,7 +16,9 @@
 		22B4ACD6262C1E1700B87217 /* ZeroWasteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4ACD5262C1E1700B87217 /* ZeroWasteUITests.swift */; };
 		400C35DE265A901B00CE4C81 /* Bool+isTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C35DC265A901B00CE4C81 /* Bool+isTrue.swift */; };
 		400C35DF265A901B00CE4C81 /* Optional+isSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C35DD265A901B00CE4C81 /* Optional+isSome.swift */; };
-		40256BD626342507007DE62D /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BD526342507007DE62D /* InitialView.swift */; };
+		400C35E1265BC40B00CE4C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400C35E0265BC40B00CE4C81 /* LaunchScreen.storyboard */; };
+		400C35E3265FAD1F00CE4C81 /* ResultBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C35E2265FAD1F00CE4C81 /* ResultBase.swift */; };
+		40256BD626342507007DE62D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BD526342507007DE62D /* LoadingView.swift */; };
 		40256BE52634294A007DE62D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE42634294A007DE62D /* LoginView.swift */; };
 		40256BEA26342953007DE62D /* ServiceIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40256BE926342953007DE62D /* ServiceIntroductionView.swift */; };
 		407EA4C3264240AA00276EF6 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EA4C2264240AA00276EF6 /* ServiceProvider.swift */; };
@@ -74,7 +76,9 @@
 		3C034AD7BC4460DD09EAB5ED /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		400C35DC265A901B00CE4C81 /* Bool+isTrue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+isTrue.swift"; sourceTree = "<group>"; };
 		400C35DD265A901B00CE4C81 /* Optional+isSome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+isSome.swift"; sourceTree = "<group>"; };
-		40256BD526342507007DE62D /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		400C35E0265BC40B00CE4C81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		400C35E2265FAD1F00CE4C81 /* ResultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBase.swift; sourceTree = "<group>"; };
+		40256BD526342507007DE62D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		40256BE42634294A007DE62D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		40256BE926342953007DE62D /* ServiceIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroductionView.swift; sourceTree = "<group>"; };
 		407EA4C2264240AA00276EF6 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
@@ -206,12 +210,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		40256BD2263424BE007DE62D /* Initial */ = {
+		40256BD2263424BE007DE62D /* Loading */ = {
 			isa = PBXGroup;
 			children = (
-				40256BD526342507007DE62D /* InitialView.swift */,
+				40256BD526342507007DE62D /* LoadingView.swift */,
 			);
-			path = Initial;
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		40256BD3263424C6007DE62D /* Login */ = {
@@ -259,6 +263,7 @@
 		4080DAF226520FDD00E2878F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				400C35E2265FAD1F00CE4C81 /* ResultBase.swift */,
 				4080DAF326520FF700E2878F /* User.swift */,
 				4080DAF5265224C900E2878F /* Auth.swift */,
 				4087CA85265A7747006016D3 /* Mission.swift */,
@@ -288,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				22B4ACBC262C1E1600B87217 /* Assets.xcassets */,
+				400C35E0265BC40B00CE4C81 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -316,7 +322,7 @@
 		40FBA985263423EF00906DC5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				40256BD2263424BE007DE62D /* Initial */,
+				40256BD2263424BE007DE62D /* Loading */,
 				40256BD3263424C6007DE62D /* Login */,
 				40256BD4263424E8007DE62D /* Onboard */,
 				22B4ACBA262C1E1600B87217 /* ContentView.swift */,
@@ -461,6 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400C35E1265BC40B00CE4C81 /* LaunchScreen.storyboard in Resources */,
 				22B4ACC0262C1E1600B87217 /* Preview Assets.xcassets in Resources */,
 				22B4ACBD262C1E1600B87217 /* Assets.xcassets in Resources */,
 			);
@@ -609,8 +616,9 @@
 				400C35DE265A901B00CE4C81 /* Bool+isTrue.swift in Sources */,
 				407EA4C72642453E00276EF6 /* ResolutionViewModel.swift in Sources */,
 				40FBA9752634199400906DC5 /* ViewModelType.swift in Sources */,
-				40256BD626342507007DE62D /* InitialView.swift in Sources */,
+				40256BD626342507007DE62D /* LoadingView.swift in Sources */,
 				4080DAF6265224C900E2878F /* Auth.swift in Sources */,
+				400C35E3265FAD1F00CE4C81 /* ResultBase.swift in Sources */,
 				4080DAEF2651F9E500E2878F /* Endpoint.swift in Sources */,
 				4080DAF12651F9EC00E2878F /* NetworkConstant.swift in Sources */,
 				40FBA97D26341A0500906DC5 /* InitialViewModel.swift in Sources */,
