@@ -15,7 +15,6 @@ struct LoginView: View {
     
     // MARK: Constants
     
-    // TODO: .localized
     private enum Texts {
         static let kakao: String = "카카오로 로그인" 
     }

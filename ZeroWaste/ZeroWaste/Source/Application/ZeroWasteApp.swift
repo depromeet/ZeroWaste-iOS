@@ -17,8 +17,11 @@ struct ZeroWasteApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
+        let provider: ServiceProviderType = ServiceProvider()
+        let viewModel: LoginViewModel = .init(provider: provider)
+        
         WindowGroup {
-            LoadingView()
+            LoadingView(viewModel: viewModel)
                 .onOpenURL(perform: { url in
                     if (AuthApi.isKakaoTalkLoginUrl(url)) {
                         _ = AuthController.handleOpenUrl(url: url)

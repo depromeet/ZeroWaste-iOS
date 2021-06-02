@@ -28,7 +28,9 @@ final class LoginViewModel: ObservableObject {
         }
     }
     
-    @Published var loginResponse: LoginResponse?
+    @Published var isLoggedIn: Bool = UserDefaults.standard.bool(forKey: "isLoggedIn")
+    @Published var isNewUser: Bool = UserDefaults.standard.bool(forKey: "isNewUser")
+    
     private let kakaoLoginSubject = PassthroughSubject<OAuthToken, Never>()
     private let kakaoResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
     private let appleLoginSubject = PassthroughSubject<AppleUser, Never>()
@@ -78,14 +80,16 @@ private extension LoginViewModel {
     }
     
     func bindOutput() {
-        kakaoResponseSubject
-            .map { $0.data }
-            .assign(to: \.loginResponse, on: self)
-            .store(in: &bag)
-        
-        appleResponseSubject
-            .map { $0.data }
-            .assign(to: \.loginResponse, on: self)
+        Publishers.Merge(kakaoResponseSubject, appleResponseSubject)
+            .sink { response in
+                guard response.error_code.hasNoError else { return }
+                
+                // userdefault가 바뀌면 자동으로 바뀌나?
+                self.isLoggedIn = true
+                self.isNewUser = response.data.isNewUser
+                UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                UserDefaults.standard.set(response.data.isNewUser, forKey: "isNewUser")
+            }
             .store(in: &bag)
     }
 }

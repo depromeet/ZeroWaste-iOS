@@ -9,22 +9,28 @@ import SwiftUI
 
 struct LoadingView: View {
         
-    @State private var isLoggedIn: Bool = false
+    @ObservedObject private var viewModel: LoginViewModel
     
-    let provider: ServiceProviderType = ServiceProvider()
+    init(viewModel: LoginViewModel) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
-        if isLoggedIn {
-            ContentView()
+        
+        if viewModel.isLoggedIn {
+            if viewModel.isNewUser {
+                OnboardView()
+            } else {
+                ContentsTabView()
+            }
         } else {
-            let viewModel: LoginViewModel = .init(provider: provider)
-            LoginView(viewModel: viewModel)
+            LoginView(viewModel: self.viewModel)
         }
     }
 }
 
 struct InitialView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView()
+        LoadingView(viewModel: .init(provider: ServiceProvider()))
     }
 }

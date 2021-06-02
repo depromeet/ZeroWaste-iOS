@@ -33,19 +33,19 @@ struct LoginResponse: Codable {
     let id: Int?
     let identifier: String
     let email: String?
-    let created_at: Date?
+    let createdAt: String?
     let token: String?
     let userId: Int?
-    let is_new_user: Bool?
+    let isNewUser: Bool
     
     enum CodingKeys: String, CodingKey {
         case id
         case identifier    
         case email    
-        case created_at = "createdAt"
+        case createdAt = "created_at"
         case token    
-        case userId
-        case is_new_user = "isNewUser"
+        case userId = "user_id"
+        case isNewUser = "is_new_user"
     }
 }
 
