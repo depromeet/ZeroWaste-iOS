@@ -28,8 +28,8 @@ final class LoginViewModel: ObservableObject {
         }
     }
     
-    @Published var isLoggedIn: Bool = UserDefaults.standard.bool(forKey: "isLoggedIn")
-    @Published var isNewUser: Bool = UserDefaults.standard.bool(forKey: "isNewUser")
+    @Published var isLoggedIn: Bool = UserProperties.isLoggedIn
+    @Published var isNewUser: Bool = UserProperties.isNewUser
     
     private let kakaoLoginSubject = PassthroughSubject<OAuthToken, Never>()
     private let kakaoResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
@@ -50,6 +50,7 @@ final class LoginViewModel: ObservableObject {
 private extension LoginViewModel {
     func bindInput() {
         // TODO: 예제에서 provider를 캡쳐하던데 self로 하는 것과 같게 동작하는지 확인
+        // TODO: UserService에서 해야할듯
         kakaoLoginSubject
             .flatMap { [provider] token in
                 return provider.networkService.request(
@@ -84,11 +85,12 @@ private extension LoginViewModel {
             .sink { response in
                 guard response.error_code.hasNoError else { return }
                 
-                // userdefault가 바뀌면 자동으로 바뀌나?
                 self.isLoggedIn = true
                 self.isNewUser = response.data.isNewUser
-                UserDefaults.standard.set(true, forKey: "isLoggedIn")
-                UserDefaults.standard.set(response.data.isNewUser, forKey: "isNewUser")
+                
+                UserProperties.isLoggedIn = true
+                UserProperties.isNewUser = response.data.isNewUser
+                UserProperties.userInfo = response.data
             }
             .store(in: &bag)
     }
