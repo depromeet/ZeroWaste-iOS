@@ -69,6 +69,7 @@ struct PledgeView: View {
             Button(Texts.startButton) { 
                 
             }
+            .buttonStyle(SubmitStyle())
         }
     }
 }

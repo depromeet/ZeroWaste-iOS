@@ -13,28 +13,31 @@
 		0CA05503074B85B2947C0BD8 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73A56BC6B6A604DE369A97 /* Mission.swift */; };
 		12D6E4A9A7F3A813E566D54B /* Optional+isSome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF489DB14B552CFF85E9D0E3 /* Optional+isSome.swift */; };
 		16681C0D4EDE3E688AC15B78 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC80D03C8B33790BC173EF /* Font+.swift */; };
+		1FBCCDFDE8852C27E619E33E /* Pods_ZeroWaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B0BDCEB911FF295B551A69 /* Pods_ZeroWaste.framework */; };
 		222D277F20D08FFBF71F9940 /* ZeroWasteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4345E011A0C39EB70CEF6DF /* ZeroWasteApp.swift */; };
 		2416B8456539557FB52488CB /* ContentsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28164A21F40D3A37357E560 /* ContentsTabView.swift */; };
+		26913716357C28EB304406E6 /* Pods_ZeroWasteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79CCFF81C703A28B812228D /* Pods_ZeroWasteTests.framework */; };
+		299803708C00245DEB116C53 /* Int+hasError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA9EF5AE4F1CF24A3F202 /* Int+hasError.swift */; };
+		34916C68F8FE14AF8C5BC74B /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB7806F5840247EC68F87A /* OnboardView.swift */; };
 		391D345D3F5DD65CD55656D3 /* MissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83456EF801A2498CBA81C377 /* MissionCell.swift */; };
 		3C95E41F572DD93695A3E645 /* Bool+isTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9BBB4335EC98CCC37665D /* Bool+isTrue.swift */; };
 		3E832DCE6EF684554CF2BA80 /* FeedProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33725FBDAD0FD08D0F3F013F /* FeedProfileView.swift */; };
-		408C01822667B41E0097A39A /* PledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C01812667B41E0097A39A /* PledgeView.swift */; };
-		408C01842667B8040097A39A /* Font+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C01832667B8040097A39A /* Font+custom.swift */; };
-		408C01872667BCD80097A39A /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C01862667BCD80097A39A /* SubmitButton.swift */; };
-		40B0438326679A34001CE0BC /* Int+hasError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B0438226679A34001CE0BC /* Int+hasError.swift */; };
-		40B043872667A251001CE0BC /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B043862667A251001CE0BC /* OnboardView.swift */; };
+		407FC69B26686F2E0051B63C /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC69A26686F2E0051B63C /* UserDefaultStorage.swift */; };
+		407FC69F2668A1590051B63C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FC69E2668A1590051B63C /* Assets.swift */; };
 		41318797F6EE81114A4095F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E398F9099FE433029F92BDDA /* Preview Assets.xcassets */; };
-		4265A9E16D1B6607188C45AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B826F7855E1F2F70C9234 /* ContentView.swift */; };
 		438F71B172D4D25F46EBDFB8 /* BlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06E5A4AEA8DE3037872AF1 /* BlockList.swift */; };
-		45A7A94D6147B6D49781FD27 /* Pods_ZeroWaste_ZeroWasteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6679DC7C6CBABEBB453080A5 /* Pods_ZeroWaste_ZeroWasteUITests.framework */; };
+		48CB68DC35F0D0BC28D62849 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8CE642D237698EA5FD50F /* SubmitButton.swift */; };
 		4C9DA0393D1B5B0D068D8B8F /* RegistStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F07A3F1D24DDA5DB5CA8D7 /* RegistStoreView.swift */; };
 		4ED5F5C1797291B2305163C1 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB934406F07034D4074FB95C /* CategoryCell.swift */; };
 		505DB2B54944B7163289773D /* ZeroWasteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BF41944D1640FF67461D80 /* ZeroWasteUITests.swift */; };
 		5401AB67670B652627B6825F /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F79F7FB0755EFE4888021 /* MissionView.swift */; };
+		5B4DCFCA983F1B2A9EF92A94 /* Font+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D765893306859AF2A8FAB213 /* Font+custom.swift */; };
 		5C87501EA8B573FDC48E8322 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C1AC79E40C588C43A4F8588 /* Colors.xcassets */; };
 		5CAF95B5EA1829E87AEF68B7 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39854FE0DD5B4B44DECF994F /* ServiceProvider.swift */; };
 		60E9F973F42C5ED7966CB81D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2404A3F2FFE2B7F6E95C12 /* NetworkManager.swift */; };
 		61D637111C3F9852E8EE252F /* ResultBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210010A24D4EF6D7B41BF54 /* ResultBase.swift */; };
+		66BC94A36A7CD85E187D12C7 /* PledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5427D3187A99B56491986F /* PledgeView.swift */; };
+		7C793A0F5D61BEBB18D0E98C /* Pods_ZeroWaste_ZeroWasteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4033A0073450947A6B3B0D86 /* Pods_ZeroWaste_ZeroWasteUITests.framework */; };
 		82E51F67E06C18BB5DA40924 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC532F6257852D1983E5083 /* Color+.swift */; };
 		854F1647A19DEBCD1EB303B9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D1D8572600CE5EDD5410AE /* LoginViewModel.swift */; };
 		8AC7AFBC952D454868746EC2 /* CTAButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A44913CC6F379B2980DFB0 /* CTAButtonStyle.swift */; };
@@ -42,7 +45,6 @@
 		944B0DD88777D5EA3E655603 /* ZeroWasteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FEA3F10D02A0AFED1602E /* ZeroWasteTests.swift */; };
 		98433937D6D7FF08D1E42739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6208910BB9298D3B7AB8700A /* Assets.xcassets */; };
 		994BB6FBF061F321E8D9E639 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331661A39915043CEFA8E71 /* FeedView.swift */; };
-		A6885C2B4E40813643B620D0 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECCE40822CB36ABE8C1593D /* ViewModelType.swift */; };
 		AC0421ABE8BD9C550F00175D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE970EC47CB2E3BCA28F9D /* LoadingView.swift */; };
 		BC426605F1CF0F81FE22E817 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7C20B671AB9513F4BC4D0 /* User.swift */; };
 		C69D7D304A5D77C03D12398C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87A17EC2C92EE8EBC3C8EA /* LoginView.swift */; };
@@ -50,97 +52,93 @@
 		CC3EEC4A5467A26014708602 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECECD6151E11E6EAE6F0770 /* Auth.swift */; };
 		CFE67CB3503ADCDBA02C388D /* ProfileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFED3C23DE0648FC3F19E6F /* ProfileHomeView.swift */; };
 		D64221E521376A0F3EE059C3 /* StoreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54D339D61E987E279E36D49 /* StoreMapView.swift */; };
-		E2F4814C9C7CFE4B952639DE /* Pods_ZeroWaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE4F4B3E9DBB0C324D618A /* Pods_ZeroWaste.framework */; };
-		E7A2D890794F7A85C6C69B5C /* Pods_ZeroWasteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CC0730FC8639166B01ADD6 /* Pods_ZeroWasteTests.framework */; };
 		EB722986ADEAE4982B989BB2 /* MissionHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2C22F1CF4FD59AD077DA2 /* MissionHomeView.swift */; };
-		F19664D8C92D0685E49CC3BE /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3BB514093265AD777A2A49 /* InitialViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0506D3702BC672478D0889F7 /* ZeroWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A44913CC6F379B2980DFB0 /* CTAButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonStyle.swift; sourceTree = "<group>"; };
-		0D3BB514093265AD777A2A49 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
-		1181A317BB6729707EE6F817 /* Pods-ZeroWasteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWasteTests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWasteTests/Pods-ZeroWasteTests.release.xcconfig"; sourceTree = "<group>"; };
 		1331661A39915043CEFA8E71 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		13F8CE642D237698EA5FD50F /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		1C1AC79E40C588C43A4F8588 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1E1F6C47A2A883E80166262F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		205B826F7855E1F2F70C9234 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		20B522E35164B772775FC73F /* Pods-ZeroWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste/Pods-ZeroWaste.release.xcconfig"; sourceTree = "<group>"; };
+		32B0BDCEB911FF295B551A69 /* Pods_ZeroWaste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWaste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33048C4C12B4EF52816F81F3 /* ZeroWasteUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ZeroWasteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33725FBDAD0FD08D0F3F013F /* FeedProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProfileView.swift; sourceTree = "<group>"; };
 		39854FE0DD5B4B44DECF994F /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
-		408C01812667B41E0097A39A /* PledgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PledgeView.swift; sourceTree = "<group>"; };
-		408C01832667B8040097A39A /* Font+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+custom.swift"; sourceTree = "<group>"; };
-		408C01862667BCD80097A39A /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
-		40B0438226679A34001CE0BC /* Int+hasError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+hasError.swift"; sourceTree = "<group>"; };
-		40B043862667A251001CE0BC /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		4033A0073450947A6B3B0D86 /* Pods_ZeroWaste_ZeroWasteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWaste_ZeroWasteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		407FC69A26686F2E0051B63C /* UserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
+		407FC69E2668A1590051B63C /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4210010A24D4EF6D7B41BF54 /* ResultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBase.swift; sourceTree = "<group>"; };
 		450A0F855BA7001F0A96ED29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A4FEA3F10D02A0AFED1602E /* ZeroWasteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroWasteTests.swift; sourceTree = "<group>"; };
 		4CCC80D03C8B33790BC173EF /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		4EAAFA8100553BDA83F48BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5534A9476960FBBC96A1D547 /* Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5276A5A6CE746CB87E5E10D1 /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5C8CAEFC2DB2F3C2DF9AB095 /* Pods-ZeroWaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste.debug.xcconfig"; path = "Target Support Files/Pods-ZeroWaste/Pods-ZeroWaste.debug.xcconfig"; sourceTree = "<group>"; };
 		5DF2C22F1CF4FD59AD077DA2 /* MissionHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionHomeView.swift; sourceTree = "<group>"; };
 		5FC532F6257852D1983E5083 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
-		61DE4F4B3E9DBB0C324D618A /* Pods_ZeroWaste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWaste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62009614FC109CC5856F98AF /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		6208910BB9298D3B7AB8700A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6679DC7C6CBABEBB453080A5 /* Pods_ZeroWaste_ZeroWasteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWaste_ZeroWasteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E89E1254BB6556C2B4EE8C2 /* Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6ED9BBB4335EC98CCC37665D /* Bool+isTrue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+isTrue.swift"; sourceTree = "<group>"; };
 		805FF855D937C3210DD3C2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		807D7943AD904DC8D060D1EE /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig"; sourceTree = "<group>"; };
-		80CC0730FC8639166B01ADD6 /* Pods_ZeroWasteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWasteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83456EF801A2498CBA81C377 /* MissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCell.swift; sourceTree = "<group>"; };
 		8D06E5A4AEA8DE3037872AF1 /* BlockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockList.swift; sourceTree = "<group>"; };
-		8ECCE40822CB36ABE8C1593D /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		910FA9EF5AE4F1CF24A3F202 /* Int+hasError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+hasError.swift"; sourceTree = "<group>"; };
 		9C3F79F7FB0755EFE4888021 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		9D2404A3F2FFE2B7F6E95C12 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9F53A90575F1248EB3BBD3B6 /* Pods-ZeroWasteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWasteTests.debug.xcconfig"; path = "Target Support Files/Pods-ZeroWasteTests/Pods-ZeroWasteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8A70F34740A78DFDD2A7F3A /* Certification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certification.swift; sourceTree = "<group>"; };
 		B6EE970EC47CB2E3BCA28F9D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C28164A21F40D3A37357E560 /* ContentsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsTabView.swift; sourceTree = "<group>"; };
-		C8EDAE6CF9E2C7F8C5E0FBD9 /* Pods-ZeroWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste/Pods-ZeroWaste.release.xcconfig"; sourceTree = "<group>"; };
 		CD49DB679814D95FDC71BE20 /* ZeroWasteTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ZeroWasteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF489DB14B552CFF85E9D0E3 /* Optional+isSome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+isSome.swift"; sourceTree = "<group>"; };
 		CF73A56BC6B6A604DE369A97 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		D06357A0BC5CA571EFE80F54 /* OngoingMissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingMissionCell.swift; sourceTree = "<group>"; };
 		D4345E011A0C39EB70CEF6DF /* ZeroWasteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroWasteApp.swift; sourceTree = "<group>"; };
+		D765893306859AF2A8FAB213 /* Font+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+custom.swift"; sourceTree = "<group>"; };
 		DB934406F07034D4074FB95C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		DD5427D3187A99B56491986F /* PledgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PledgeView.swift; sourceTree = "<group>"; };
 		DD87A17EC2C92EE8EBC3C8EA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E049AD0B0119472C49D049A3 /* Pods-ZeroWasteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWasteTests.debug.xcconfig"; path = "Target Support Files/Pods-ZeroWasteTests/Pods-ZeroWasteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E7C20B671AB9513F4BC4D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E398F9099FE433029F92BDDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E54D339D61E987E279E36D49 /* StoreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapView.swift; sourceTree = "<group>"; };
-		E75EF89BA7A28A4C6AEB785C /* Pods-ZeroWaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste.debug.xcconfig"; path = "Target Support Files/Pods-ZeroWaste/Pods-ZeroWaste.debug.xcconfig"; sourceTree = "<group>"; };
+		E79CCFF81C703A28B812228D /* Pods_ZeroWasteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWasteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BF41944D1640FF67461D80 /* ZeroWasteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroWasteUITests.swift; sourceTree = "<group>"; };
 		E8D1D8572600CE5EDD5410AE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EAC90A1DD74E70F754A47F32 /* ZeroWaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeroWaste.entitlements; sourceTree = "<group>"; };
 		EBFED3C23DE0648FC3F19E6F /* ProfileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeView.swift; sourceTree = "<group>"; };
+		EE4B8CD9DE14263299A3C3CC /* Pods-ZeroWasteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWasteTests.release.xcconfig"; path = "Target Support Files/Pods-ZeroWasteTests/Pods-ZeroWasteTests.release.xcconfig"; sourceTree = "<group>"; };
 		EECECD6151E11E6EAE6F0770 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		EFBB7806F5840247EC68F87A /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		F8F07A3F1D24DDA5DB5CA8D7 /* RegistStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistStoreView.swift; sourceTree = "<group>"; };
 		FAE0A988B28073BB792F52ED /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		35C61A45A62EC75E8FC98750 /* Frameworks */ = {
+		093E5867C6332D1E5E5F13E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45A7A94D6147B6D49781FD27 /* Pods_ZeroWaste_ZeroWasteUITests.framework in Frameworks */,
+				1FBCCDFDE8852C27E619E33E /* Pods_ZeroWaste.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		888230B3C19DF993FE723AF6 /* Frameworks */ = {
+		54AFE977AE2D58675B399208 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A2D890794F7A85C6C69B5C /* Pods_ZeroWasteTests.framework in Frameworks */,
+				7C793A0F5D61BEBB18D0E98C /* Pods_ZeroWaste_ZeroWasteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEC8A8627748A25732025BFA /* Frameworks */ = {
+		F9DDB1836E8F90BA860EE2D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F4814C9C7CFE4B952639DE /* Pods_ZeroWaste.framework in Frameworks */,
+				26913716357C28EB304406E6 /* Pods_ZeroWasteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +156,7 @@
 		0492017589B676BC7A63BC94 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				407FC69D2668A13C0051B63C /* Generated */,
 				6208910BB9298D3B7AB8700A /* Assets.xcassets */,
 				1C1AC79E40C588C43A4F8588 /* Colors.xcassets */,
 				1E1F6C47A2A883E80166262F /* LaunchScreen.storyboard */,
@@ -172,8 +171,8 @@
 				9F5F2BA111CE1A44DA83D6B2 /* ZeroWasteTests */,
 				5E14D3DC419EBBB25B2028A4 /* ZeroWasteUITests */,
 				273CC8175114C713125D4413 /* Products */,
-				E4D13BE01D90B0D3FEEC8B12 /* Pods */,
-				334EAB69285BCB263FDC5E6A /* Frameworks */,
+				5C5B7FD18109D8F134D0684E /* Pods */,
+				D5B680517A3208DF5A3BE911 /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -205,22 +204,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		334EAB69285BCB263FDC5E6A /* Frameworks */ = {
+		407FC69D2668A13C0051B63C /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				61DE4F4B3E9DBB0C324D618A /* Pods_ZeroWaste.framework */,
-				6679DC7C6CBABEBB453080A5 /* Pods_ZeroWaste_ZeroWasteUITests.framework */,
-				80CC0730FC8639166B01ADD6 /* Pods_ZeroWasteTests.framework */,
+				407FC69E2668A1590051B63C /* Assets.swift */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		408C01852667BCB00097A39A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				408C01862667BCD80097A39A /* SubmitButton.swift */,
-			);
-			path = Common;
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		4639F1D59E8DC9D8A8FB3145 /* Models */ = {
@@ -265,6 +254,19 @@
 			path = StyleGuide;
 			sourceTree = "<group>";
 		};
+		5C5B7FD18109D8F134D0684E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C8CAEFC2DB2F3C2DF9AB095 /* Pods-ZeroWaste.debug.xcconfig */,
+				20B522E35164B772775FC73F /* Pods-ZeroWaste.release.xcconfig */,
+				6E89E1254BB6556C2B4EE8C2 /* Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig */,
+				5276A5A6CE746CB87E5E10D1 /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */,
+				9F53A90575F1248EB3BBD3B6 /* Pods-ZeroWasteTests.debug.xcconfig */,
+				EE4B8CD9DE14263299A3C3CC /* Pods-ZeroWasteTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5E14D3DC419EBBB25B2028A4 /* ZeroWasteUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,8 +289,8 @@
 		6BE8CFD4AE0C8887DF6DF80D /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
-				40B043862667A251001CE0BC /* OnboardView.swift */,
-				408C01812667B41E0097A39A /* PledgeView.swift */,
+				EFBB7806F5840247EC68F87A /* OnboardView.swift */,
+				DD5427D3187A99B56491986F /* PledgeView.swift */,
 			);
 			path = Onboard;
 			sourceTree = "<group>";
@@ -299,6 +301,15 @@
 				7BD555C6450267F26D589458 /* Feed */,
 			);
 			path = Community;
+			sourceTree = "<group>";
+		};
+		7728A679B3D6D369BF6933E2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				13F8CE642D237698EA5FD50F /* SubmitButton.swift */,
+				407FC69A26686F2E0051B63C /* UserDefaultStorage.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		7BD555C6450267F26D589458 /* Feed */ = {
@@ -339,15 +350,12 @@
 		9F9D577D382A9C4882372964 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				205B826F7855E1F2F70C9234 /* ContentView.swift */,
-				0D3BB514093265AD777A2A49 /* InitialViewModel.swift */,
-				8ECCE40822CB36ABE8C1593D /* ViewModelType.swift */,
 				7012BD6C4DA8DB851EFF66C4 /* Community */,
 				88BB84DC221DB732FA8E30BD /* Loading */,
 				9F60466EB24D25B181E070E4 /* Login */,
-				6BE8CFD4AE0C8887DF6DF80D /* Onboard */,
 				A8C69AF75D5EFA6C27B548C0 /* Map */,
 				50C01DC6B650602E9D5B7A17 /* Mission */,
+				6BE8CFD4AE0C8887DF6DF80D /* Onboard */,
 				D5347D79DC02E06841E0464B /* Profile */,
 				528DBA16DD2E4B6D15A08C8A /* StyleGuide */,
 				10335F1EE32E6D4EDF75AE33 /* ViewStyle */,
@@ -376,11 +384,11 @@
 			isa = PBXGroup;
 			children = (
 				0461209C6E00BEFDE90C0E2B /* Application */,
-				ECF564682CDDC1A9EA3F24AF /* ServiceProvider */,
-				C634BF74347CCCFF125473A1 /* Network */,
-				9F9D577D382A9C4882372964 /* UI */,
-				408C01852667BCB00097A39A /* Common */,
+				7728A679B3D6D369BF6933E2 /* Common */,
 				F3BC4FEC7A106AC55BCECD95 /* Extensions */,
+				C634BF74347CCCFF125473A1 /* Network */,
+				ECF564682CDDC1A9EA3F24AF /* ServiceProvider */,
+				9F9D577D382A9C4882372964 /* UI */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -404,6 +412,16 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		D5B680517A3208DF5A3BE911 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32B0BDCEB911FF295B551A69 /* Pods_ZeroWaste.framework */,
+				4033A0073450947A6B3B0D86 /* Pods_ZeroWaste_ZeroWasteUITests.framework */,
+				E79CCFF81C703A28B812228D /* Pods_ZeroWasteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D726E3EA05731816071B2C83 /* ZeroWaste */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,19 +431,6 @@
 				4D76167615B5119DA7A1BB45 /* Supporting */,
 			);
 			path = ZeroWaste;
-			sourceTree = "<group>";
-		};
-		E4D13BE01D90B0D3FEEC8B12 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E75EF89BA7A28A4C6AEB785C /* Pods-ZeroWaste.debug.xcconfig */,
-				C8EDAE6CF9E2C7F8C5E0FBD9 /* Pods-ZeroWaste.release.xcconfig */,
-				5534A9476960FBBC96A1D547 /* Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig */,
-				807D7943AD904DC8D060D1EE /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */,
-				E049AD0B0119472C49D049A3 /* Pods-ZeroWasteTests.debug.xcconfig */,
-				1181A317BB6729707EE6F817 /* Pods-ZeroWasteTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		ECF564682CDDC1A9EA3F24AF /* ServiceProvider */ = {
@@ -440,9 +445,9 @@
 			isa = PBXGroup;
 			children = (
 				6ED9BBB4335EC98CCC37665D /* Bool+isTrue.swift */,
+				D765893306859AF2A8FAB213 /* Font+custom.swift */,
+				910FA9EF5AE4F1CF24A3F202 /* Int+hasError.swift */,
 				CF489DB14B552CFF85E9D0E3 /* Optional+isSome.swift */,
-				40B0438226679A34001CE0BC /* Int+hasError.swift */,
-				408C01832667B8040097A39A /* Font+custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -454,9 +459,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB60C076A752137374D6978D /* Build configuration list for PBXNativeTarget "ZeroWasteTests" */;
 			buildPhases = (
-				3405A6793D0E3D2FF9A447BD /* [CP] Check Pods Manifest.lock */,
+				B6BE8D76B03E0ED939AAEEE2 /* [CP] Check Pods Manifest.lock */,
 				F1C279ACA16EC940E3D477E0 /* Sources */,
-				888230B3C19DF993FE723AF6 /* Frameworks */,
+				F9DDB1836E8F90BA860EE2D6 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -471,10 +476,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 192C76B950E8FD6B7CC67F72 /* Build configuration list for PBXNativeTarget "ZeroWasteUITests" */;
 			buildPhases = (
-				F0455EB005852EF165F66FBA /* [CP] Check Pods Manifest.lock */,
+				ACBBB7C18695624766BA2AED /* [CP] Check Pods Manifest.lock */,
 				FF344561266AA5DE224B4A62 /* Sources */,
-				35C61A45A62EC75E8FC98750 /* Frameworks */,
-				CDFF48EE1089D7E6FEFFF03F /* [CP] Embed Pods Frameworks */,
+				54AFE977AE2D58675B399208 /* Frameworks */,
+				E46259B2E1615BF7F1F9A357 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -489,11 +494,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F401AB34A916E941C203C9D8 /* Build configuration list for PBXNativeTarget "ZeroWaste" */;
 			buildPhases = (
-				F1D9E06F0891EAB0EA1FA06C /* [CP] Check Pods Manifest.lock */,
+				955B463DA9115796B5F5638A /* [CP] Check Pods Manifest.lock */,
 				E215F65F500826610FC1D4DB /* Sources */,
 				D698CCF58592CAB1A92E9117 /* Resources */,
-				AEC8A8627748A25732025BFA /* Frameworks */,
-				C784DBD67C60C5B89351DF60 /* [CP] Embed Pods Frameworks */,
+				093E5867C6332D1E5E5F13E4 /* Frameworks */,
+				3A8217AD14274CC45BFC265B /* [CP] Embed Pods Frameworks */,
+				407FC6A02668A3010051B63C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -548,29 +554,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3405A6793D0E3D2FF9A447BD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZeroWasteTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C784DBD67C60C5B89351DF60 /* [CP] Embed Pods Frameworks */ = {
+		3A8217AD14274CC45BFC265B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -587,24 +571,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeroWaste/Pods-ZeroWaste-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CDFF48EE1089D7E6FEFFF03F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0455EB005852EF165F66FBA /* [CP] Check Pods Manifest.lock */ = {
+		407FC6A02668A3010051B63C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,21 +579,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZeroWaste-ZeroWasteUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n(cd Scripts && ./swiftgen.sh)\n";
 		};
-		F1D9E06F0891EAB0EA1FA06C /* [CP] Check Pods Manifest.lock */ = {
+		955B463DA9115796B5F5638A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -648,6 +610,67 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ACBBB7C18695624766BA2AED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeroWaste-ZeroWasteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BE8D76B03E0ED939AAEEE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeroWasteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E46259B2E1615BF7F1F9A357 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeroWaste-ZeroWasteUITests/Pods-ZeroWaste-ZeroWasteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -658,19 +681,18 @@
 				CC3EEC4A5467A26014708602 /* Auth.swift in Sources */,
 				438F71B172D4D25F46EBDFB8 /* BlockList.swift in Sources */,
 				3C95E41F572DD93695A3E645 /* Bool+isTrue.swift in Sources */,
-				40B0438326679A34001CE0BC /* Int+hasError.swift in Sources */,
 				8AC7AFBC952D454868746EC2 /* CTAButtonStyle.swift in Sources */,
 				4ED5F5C1797291B2305163C1 /* CategoryCell.swift in Sources */,
 				088D8E3188BD22E29B2B0432 /* Certification.swift in Sources */,
 				82E51F67E06C18BB5DA40924 /* Color+.swift in Sources */,
-				4265A9E16D1B6607188C45AA /* ContentView.swift in Sources */,
 				2416B8456539557FB52488CB /* ContentsTabView.swift in Sources */,
 				CAF86293391C77088F06294F /* Endpoint.swift in Sources */,
-				408C01822667B41E0097A39A /* PledgeView.swift in Sources */,
 				3E832DCE6EF684554CF2BA80 /* FeedProfileView.swift in Sources */,
+				407FC69B26686F2E0051B63C /* UserDefaultStorage.swift in Sources */,
 				994BB6FBF061F321E8D9E639 /* FeedView.swift in Sources */,
 				16681C0D4EDE3E688AC15B78 /* Font+.swift in Sources */,
-				F19664D8C92D0685E49CC3BE /* InitialViewModel.swift in Sources */,
+				5B4DCFCA983F1B2A9EF92A94 /* Font+custom.swift in Sources */,
+				299803708C00245DEB116C53 /* Int+hasError.swift in Sources */,
 				AC0421ABE8BD9C550F00175D /* LoadingView.swift in Sources */,
 				C69D7D304A5D77C03D12398C /* LoginView.swift in Sources */,
 				854F1647A19DEBCD1EB303B9 /* LoginViewModel.swift in Sources */,
@@ -680,18 +702,18 @@
 				5401AB67670B652627B6825F /* MissionView.swift in Sources */,
 				0C9713971220D69049A0779A /* NetworkConstant.swift in Sources */,
 				60E9F973F42C5ED7966CB81D /* NetworkManager.swift in Sources */,
+				34916C68F8FE14AF8C5BC74B /* OnboardView.swift in Sources */,
 				8ED10C08C80AA51C465FDF30 /* OngoingMissionCell.swift in Sources */,
-				40B043872667A251001CE0BC /* OnboardView.swift in Sources */,
 				12D6E4A9A7F3A813E566D54B /* Optional+isSome.swift in Sources */,
+				66BC94A36A7CD85E187D12C7 /* PledgeView.swift in Sources */,
 				CFE67CB3503ADCDBA02C388D /* ProfileHomeView.swift in Sources */,
-				408C01872667BCD80097A39A /* SubmitButton.swift in Sources */,
 				4C9DA0393D1B5B0D068D8B8F /* RegistStoreView.swift in Sources */,
-				408C01842667B8040097A39A /* Font+custom.swift in Sources */,
+				407FC69F2668A1590051B63C /* Assets.swift in Sources */,
 				61D637111C3F9852E8EE252F /* ResultBase.swift in Sources */,
 				5CAF95B5EA1829E87AEF68B7 /* ServiceProvider.swift in Sources */,
 				D64221E521376A0F3EE059C3 /* StoreMapView.swift in Sources */,
+				48CB68DC35F0D0BC28D62849 /* SubmitButton.swift in Sources */,
 				BC426605F1CF0F81FE22E817 /* User.swift in Sources */,
-				A6885C2B4E40813643B620D0 /* ViewModelType.swift in Sources */,
 				222D277F20D08FFBF71F9940 /* ZeroWasteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,7 +739,7 @@
 /* Begin XCBuildConfiguration section */
 		06A0B8329632F55E274ED427 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E049AD0B0119472C49D049A3 /* Pods-ZeroWasteTests.debug.xcconfig */;
+			baseConfigurationReference = 9F53A90575F1248EB3BBD3B6 /* Pods-ZeroWasteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZeroWasteTests/Info.plist;
@@ -797,7 +819,7 @@
 		};
 		562F0D9084BF85DF3745CA7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5534A9476960FBBC96A1D547 /* Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig */;
+			baseConfigurationReference = 6E89E1254BB6556C2B4EE8C2 /* Pods-ZeroWaste-ZeroWasteUITests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZeroWasteUITests/Info.plist;
@@ -870,17 +892,17 @@
 		};
 		77364598749AFB7600D33269 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E75EF89BA7A28A4C6AEB785C /* Pods-ZeroWaste.debug.xcconfig */;
+			baseConfigurationReference = 5C8CAEFC2DB2F3C2DF9AB095 /* Pods-ZeroWaste.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 85329TR25G;
+				DEVELOPMENT_TEAM = P25P5JJVFC;
 				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.krgoodnews.ZeroWaste;
+				PRODUCT_BUNDLE_IDENTIFIER = Depromeet.ZeroWaste;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -888,7 +910,7 @@
 		};
 		A7132348861FF1A00041043F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1181A317BB6729707EE6F817 /* Pods-ZeroWasteTests.release.xcconfig */;
+			baseConfigurationReference = EE4B8CD9DE14263299A3C3CC /* Pods-ZeroWasteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZeroWasteTests/Info.plist;
@@ -905,7 +927,7 @@
 		};
 		C0B3D0320369497A419E5449 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 807D7943AD904DC8D060D1EE /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */;
+			baseConfigurationReference = 5276A5A6CE746CB87E5E10D1 /* Pods-ZeroWaste-ZeroWasteUITests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZeroWasteUITests/Info.plist;
@@ -922,17 +944,17 @@
 		};
 		FF75EDE4A2EA75236718DD00 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8EDAE6CF9E2C7F8C5E0FBD9 /* Pods-ZeroWaste.release.xcconfig */;
+			baseConfigurationReference = 20B522E35164B772775FC73F /* Pods-ZeroWaste.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 85329TR25G;
+				DEVELOPMENT_TEAM = P25P5JJVFC;
 				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.krgoodnews.ZeroWaste;
+				PRODUCT_BUNDLE_IDENTIFIER = Depromeet.ZeroWaste;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

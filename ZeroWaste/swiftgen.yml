@@ -1,8 +1,6 @@
-input_dir: ZeroWaste/
-output_dir: ZeroWaste/Generated/
 xcassets:
   inputs:
-    - Assets.xcassets
+    - ZeroWaste/Resource/Colors.xcassets
   outputs:
     templateName: swift5
-    output: Generated/Assets.swift
+    output: ZeroWaste/Resource/Generated/Assets.swift
