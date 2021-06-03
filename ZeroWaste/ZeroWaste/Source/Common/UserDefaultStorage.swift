@@ -8,16 +8,19 @@
 
 import Foundation
 
-protocol UserDefaultStorage {
-    associatedtype ValueType
+class UserDefaultStorage<T> {
+    let uniqueKey: String
+    let defaultValue: T
+    
+    init(uniqueKey: String, defaultValue: T) {
+        self.uniqueKey = uniqueKey
+        self.defaultValue = defaultValue
+    }
 }
 
 @propertyWrapper
-final class UserDefaultProperty<T: Codable> {
-    private let uniqueKey: String
-    private let defaultValue: T
-    
-    var projectedValue: UserDefaultProperty<T> { return self }
+final class CodableProperty<T: Codable>: UserDefaultStorage<T> {
+    var projectedValue: CodableProperty<T> { return self }
     
     var wrappedValue: T {
         get {
@@ -31,23 +34,33 @@ final class UserDefaultProperty<T: Codable> {
             UserDefaults.standard.set(data, forKey: uniqueKey)
         }
     }
+}
+
+@propertyWrapper
+final class ValueProperty<T>: UserDefaultStorage<T> {
+    var projectedValue: ValueProperty<T> { return self }
     
-    init(uniqueKey: String, defaultValue: T) {
-        self.uniqueKey = uniqueKey
-        self.defaultValue = defaultValue
+    var wrappedValue: T {
+        get {
+            UserDefaults.standard.value(forKey: uniqueKey) as? T ?? defaultValue
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: uniqueKey)
+        }
     }
 }
 
 struct UserProperties {
-    @UserDefaultProperty(
+    @CodableProperty(
         uniqueKey: "userInfo", 
         defaultValue: LoginResponse(id: 0, identifier: "", email: "", createdAt: "", token: "", userId: 0, isNewUser: false)
     )
     static var userInfo: LoginResponse?
     
-    @UserDefaultProperty(uniqueKey: "isLoggedIn", defaultValue: false)
+    @ValueProperty(uniqueKey: "isLoggedIn", defaultValue: false)
     static var isLoggedIn: Bool
     
-    @UserDefaultProperty(uniqueKey: "isNewUser", defaultValue: true)
+    @ValueProperty(uniqueKey: "isNewUser", defaultValue: true)
     static var isNewUser: Bool
 }

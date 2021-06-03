@@ -16,7 +16,6 @@ struct LoadingView: View {
     }
     
     var body: some View {
-        
         if viewModel.isLoggedIn {
             if viewModel.isNewUser {
                 OnboardView()
