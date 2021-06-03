@@ -1,6 +1,7 @@
 xcassets:
   inputs:
     - ZeroWaste/Resource/Colors.xcassets
+    - ZeroWaste/Resource/Assets.xcassets    
   outputs:
     templateName: swift5
     output: ZeroWaste/Resource/Generated/Assets.swift
