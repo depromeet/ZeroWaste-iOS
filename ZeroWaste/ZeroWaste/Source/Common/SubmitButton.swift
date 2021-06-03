@@ -18,7 +18,7 @@ struct SubmitStyle: ButtonStyle {
                 height: 52, 
                 alignment: .center
             )
-            .background(Color(Asset.Colors.mainEnabled.color))
+//            .background(Color(Asset.Colors.mainEnabled.color))
             .foregroundColor(.black)
             .cornerRadius(50)
             

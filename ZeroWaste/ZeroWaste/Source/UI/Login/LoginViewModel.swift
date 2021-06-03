@@ -35,7 +35,7 @@ final class LoginViewModel: ObservableObject {
     private let kakaoResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
     private let appleLoginSubject = PassthroughSubject<AppleUser, Never>()
     private let appleResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
-    var bag = Set<AnyCancellable>()
+    private var bag = Set<AnyCancellable>()
     
     private let provider: ServiceProviderType
     
