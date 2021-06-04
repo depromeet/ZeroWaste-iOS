@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-
+import Combine
+import KakaoSDKAuth
+import KakaoSDKUser
 import AuthenticationServices
 
 struct LoginView: View {
@@ -14,109 +16,158 @@ struct LoginView: View {
     // MARK: Constants
     
     // TODO: .localized
-    private enum Text {
-        static let kakao: String = "KakaoTalk Login" 
-        static let apple: String = "Apple Login"
-        static let find: String = "id/pw find"
+    private enum Texts {
+        static let kakao: String = "카카오로 로그인" 
     }
     
-    private enum Colors {
-        static let yellow: Color = .yellow
-        static let black: Color = .black
+    private enum Metrics {
+        static let buttonWidth: CGFloat = UIScreen.main.bounds.width * 0.8
+        static let buttonHeight: CGFloat = 60
+        static let cornerRadius: CGFloat = 6
     }
-    
-    // TODO: 다른데서도 쓰일 듯
-    private enum LoginType {
-        case kakao
-        case apple
-    }
-    
+        
     // MARK: Property
     
     @StateObject var viewModel: LoginViewModel
+    
+    // MARK: Init
     
     init(viewModel: LoginViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
+    // MARK: Body
+    
     var body: some View {
-        VStack(alignment: .center, spacing: 50, content:  {
-            drawCircleImage()
-            drawLoginVStack()
-            drawFindButton()
+        ZStack {
+            Color(.sRGB, red: 0.094, green: 0.137, blue: 0.306, opacity: 1)
+                .ignoresSafeArea()
             
-            // 얘는 추후 변경될 듯
-            Spacer()
-                .frame(width: 0, height: 50, alignment: .center)
-        })
+            VStack(alignment: .center, spacing: 58, content:  {
+                loginIntroductionTitle
+                loginIntroductionDescription
+                
+                Spacer().frame(height: 38)
+                
+                loginVStack
+            })
+        }
     }
 }
 
 // MARK: UI Methods
 
 extension LoginView {
-    private func drawCircleImage() -> some View {
-        let circleSize: CGFloat = UIScreen.main.bounds.width / 2 
-        
-        return  Circle()
-            .stroke()
-            .frame(
-                width: circleSize, 
-                height: circleSize, 
-                alignment: .center
-            )
+    private var loginIntroductionTitle: some View {
+        Text("제로웨이스트 습관 형성 앱")
+            .foregroundColor(.white)
     }
     
-    private func drawLoginVStack() -> some View {
-        let buttonWidth: CGFloat = UIScreen.main.bounds.width * 0.8
-        let buttonHeight: CGFloat = 60
-        let cornerRadius: CGFloat = 8
-        
-        return VStack(alignment: .center, spacing: 10, content: {
-            Button(Text.kakao, action: { })
-                .frame(
-                    width: buttonWidth, 
-                    height: buttonHeight, 
-                    alignment: .center
-                )
-                .background(Colors.yellow)
-                .foregroundColor(Colors.black)
-                .cornerRadius(cornerRadius)
-            
-            SignInWithAppleButton { request in
-                // request parameter from apple login
-                request.requestedScopes = [.email, .fullName]
-                
-            } onCompletion: { result in
-                // getting error or success
-                
-                switch result {
-                case let .success(user):
-                    // do login with Firebase
-                    print("logged in \(user)")
-//                    loggedIn.toggle()
-                case let .failure(error):
-                    print(error.localizedDescription)
-//                    loggedIn.toggle()
-                }   
-            }
-            .signInWithAppleButtonStyle(.black)
-            .frame(
-                width: buttonWidth, 
-                height: buttonHeight, 
-                alignment: .center
-            )
-            .cornerRadius(cornerRadius)
-            // 따라한 영상에서 그린 건데 hig에 맞는지 확인
-//            .frame(height: buttonHeight)
-//            .clipShape(Capsule())
-//            .padding(.horizontal, 30)
+    private var loginIntroductionDescription: some View {
+        Text("zero would you?")
+            .foregroundColor(.white)
+    }
+    
+    private var loginVStack: some View {
+        return VStack(alignment: .center, spacing: 15, content: {
+            kakaoLoginButton
+            appleLoginButton
         })
     }
     
-    private func drawFindButton() -> some View {
-        return Button(Text.find, action: { })
-            .font(.system(size: 20))
+    private var kakaoLoginButton: some View {
+        Button(Texts.kakao, action: kakaoLogin)
+            .font(.custom("Apple SD Gothic Neo", size: 16))
+            .frame(
+                width: Metrics.buttonWidth, 
+                height: Metrics.buttonHeight, 
+                alignment: .center
+            )
+            .background(Color(red: 1.0, green: 0.9, blue: 0.0))
+            .foregroundColor(.black)
+            .cornerRadius(Metrics.cornerRadius)
+    }
+    
+    private var appleLoginButton: some View {
+        SignInWithAppleButton(
+            .signIn,
+            onRequest: configure,
+            onCompletion: handle
+        )
+        .signInWithAppleButtonStyle(.black)
+        .frame(
+            width: Metrics.buttonWidth, 
+            height: Metrics.buttonHeight, 
+            alignment: .center
+        )
+    }
+}
+
+extension LoginView {
+    private func kakaoLogin() {
+        guard UserApi.isKakaoTalkLoginAvailable().isTrue else {
+            print("UserApi.isKakaoTalkLoginAvailable is false")
+            return
+        }
+        
+        UserApi.shared.loginWithKakaoTalk { oauthToken, error in
+            guard error.isNone else { 
+                // TODO: 에러 표시로 변경
+                print(String(describing: error))
+                return
+            }
+            
+            if let oauthToken = oauthToken {
+                print(oauthToken)
+                
+                self.viewModel.apply(.kakaoLogin(token: oauthToken))    
+            }
+        }
+    }
+    
+    private func configure(_ request: ASAuthorizationAppleIDRequest) {
+        request.requestedScopes = [.email, .fullName]
+    }
+    
+    private func handle(_ authResult: Result<ASAuthorization, Error>) {
+        switch authResult { 
+        case let .success(auth):
+            print(auth)
+            
+            switch auth.credential {
+            case let appleIdCredentials as ASAuthorizationAppleIDCredential:
+                if let appleUser = AppleUser(credentials: appleIdCredentials) {
+                    let appleUserData = try? JSONEncoder().encode(appleUser)
+                    
+                    // userDefaults에 저장하는건 위험한 방법이지만 지금 저장안하면
+                    // 앞으로는 아예 저장 못해서 일단 여기 저장하고 나중에 지우는게 좋다고 함
+                    UserDefaults.standard.setValue(appleUserData, forKey: appleUser.userID)
+                    
+                    print("saved apple user", appleUser)
+                    
+                    viewModel.apply(.appleLogin(token: appleUser))
+                } else {
+                    print("missing some fields", appleIdCredentials.user)
+                    
+                    guard let appleUserData = UserDefaults.standard.data(forKey: appleIdCredentials.user),
+                          let appleUser = try? JSONDecoder().decode(AppleUser.self, from: appleUserData)
+                    else { return }
+                    
+                    print(appleUser)
+                    
+                    viewModel.apply(.appleLogin(token: appleUser))
+                }
+                
+                
+            default:
+                print(auth)
+                // TODO: 여기서도 에러 보내야하는가?
+            }
+            
+        case let .failure(error):
+            // TODO: 에러 표시로 변경
+            print(error)
+        }
     }
 }
 

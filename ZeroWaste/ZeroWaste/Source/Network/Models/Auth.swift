@@ -6,10 +6,17 @@
 //
 
 import Foundation
+import KakaoSDKAuth
+import AuthenticationServices
 
 struct JSONWebToken: Codable {
     let nickname: String
     let password: String
+}
+
+struct AppleLoginToken: Codable {
+    let identifier: String
+    let email: String?
 }
 
 struct KakaoLoginToken: Codable {
@@ -22,6 +29,45 @@ struct KakaoLoginToken: Codable {
     }
 }
 
+struct LoginResponse: Codable {
+    let id: Int?
+    let identifier: String
+    let email: String?
+    let created_at: Date?
+    let token: String?
+    let userId: Int?
+    let is_new_user: Bool?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case identifier    
+        case email    
+        case created_at = "createdAt"
+        case token    
+        case userId
+        case is_new_user = "isNewUser"
+    }
+}
+
 struct RefreshJSONWebToken: Codable {
     let token: String
+}
+
+struct AppleUser: Codable {
+    let userID: String
+    let firstName: String
+    let lastName: String
+    let email: String
+    
+    init?(credentials: ASAuthorizationAppleIDCredential) {
+        guard let firstName = credentials.fullName?.givenName,
+              let lastName = credentials.fullName?.familyName,
+              let email = credentials.email
+        else { return nil }
+        
+        self.userID = credentials.user
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+    }
 }

@@ -20,7 +20,7 @@ final class NetworkManager: NetworkManagerType {
             return Fail(error: NetworkError.unableToMakeURLRequest).eraseToAnyPublisher() 
         }
         
-        print(request)
+        print("request: ", request)
         
         return session
             .dataTaskPublisher(for: request)

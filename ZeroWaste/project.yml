@@ -1,0 +1,47 @@
+name: ZeroWaste
+
+attributes:
+  ORGANIZATIONNAME: Depromeet
+
+options:
+  deploymentTarget:
+    iOS: 14.0
+  defaultConfig: Release
+  indentWidth: 4
+  tabWidth: 4
+    
+  postGenCommand: pod install
+
+targets:
+  ZeroWaste:
+      type: application
+      platform: iOS
+      settings:
+        base:
+          INFOPLIST_FILE: ZeroWaste/Supporting/Info.plist
+          PRODUCT_BUNDLE_IDENTIFIER: com.krgoodnews.ZeroWaste
+      entitlements: &entitlements
+        path: ZeroWaste/ZeroWaste.entitlements
+        properties:
+          aps-environment: development
+          com.apple.developer.associated-domains: []
+          com.apple.developer.applesignin: [Default]
+      sources: [ZeroWaste]
+
+  ZeroWasteTests:
+      type: bundle.unit-test
+      platform: iOS
+      settings:
+        base:
+          INFOPLIST_FILE: ZeroWasteTests/Info.plist
+          PRODUCT_BUNDLE_IDENTIFIER: com.krgoodnews.ZeroWasteTests
+      sources: [ZeroWasteTests]
+
+  ZeroWasteUITests:
+      type: bundle.ui-testing
+      platform: iOS
+      settings:
+        base:
+          INFOPLIST_FILE: ZeroWasteUITests/Info.plist
+          PRODUCT_BUNDLE_IDENTIFIER: com.krgoodnews.ZeroWasteUITests
+      sources: [ZeroWasteUITests]

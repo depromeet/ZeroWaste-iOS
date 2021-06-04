@@ -9,9 +9,7 @@ target 'ZeroWaste' do
   pod 'Then'
   
   # KakaoLogin
-  pod 'KakaoSDKCommon'
-  pod 'KakaoSDKAuth'
-  pod 'KakaoSDKUser'
+  pod 'KakaoSDK'
 
   target 'ZeroWasteTests' do
     inherit! :search_paths

@@ -13,6 +13,8 @@ struct User: Codable {
     let level: Int?
     let reportedCounts: Int?
     let isNotify: Bool?
+    let completedMission: Int?
+    let progressingMission: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -20,5 +22,7 @@ struct User: Codable {
         case level
         case reportedCounts = "reported_counts"
         case isNotify = "is_notify"
+        case completedMission = "completed_mission_counts"
+        case progressingMission = "progressing_mission_counts"
     }
 }

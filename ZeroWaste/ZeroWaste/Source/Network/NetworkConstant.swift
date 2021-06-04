@@ -13,7 +13,7 @@ typealias Parameters = [String: Any?]
 enum HTTPTask {
     case none
     case requestHeader(urlParams: Parameters)
-    case requestBody(json: Any)
+    case requestBody(json: Parameters)
 }
 
 enum HTTPMethod: String {
@@ -25,7 +25,7 @@ enum HTTPMethod: String {
 }
 
 enum Network {
-    static let baseURL: String = "http://18.217.57.135:8000/api" 
+    static let baseURL: String = "http://18.218.186.160:8000/api" 
 }
 
 enum HTTPHeaderFields {
@@ -36,7 +36,7 @@ enum HTTPHeaderFields {
     static let contentType: String = "Content-Type"
     
     static let token: String = "X-CSRFToken"
-    static let tokenKey: String = "XgeBBKXeSdI7KOcNLsPDpPDSkXUdTi6IhMDuIHOT0ghkrGr49k0QStfmA2vuh5NT"
+    static let tokenKey: String = "M0f8PtmHr6AOZ5PEVUcKzvmDHkgqoL5f1dfW8ydjLSbcTC3UkujlhJn7QBTVBtqT"
     
     enum ContentType {
         static let json: String = "application/json"

@@ -21,6 +21,7 @@ enum Endpoint {
     case postAuth(token: JSONWebToken)
     case postKakaoAuth(token: KakaoLoginToken)
     case postRefreshAuth(token: RefreshJSONWebToken)
+    case postAppleAuth(token: AppleLoginToken)
     
     // MARK: Users
     // TODO: 네이밍 어떻게 해야할지 잘 모르겠습니다!
@@ -40,19 +41,22 @@ extension Endpoint: EndpointType {
     var path: String {
         switch self {
         case .postAuth:
-            return "/jwt-auth"
+            return "/jwt-auth/"
             
         case .postKakaoAuth:
-            return "/jwt-auth/kakao"
+            return "/jwt-auth/kakao/"
             
         case .postRefreshAuth:
-            return "/jwt-auth/refresh"
+            return "/jwt-auth/refresh/"
+            
+        case .postAppleAuth:
+            return "/jwt-auth/apple/"
         
         case .getUserList:
-            return "/users"
-            
+            return "/users/"
+        
         case .getUser(let id), .putUser(let id), .patchUser(let id), .deleteUser(let id):
-            return "/users/\(id)"
+            return "/users/\(id)/"
         }
     }
     
@@ -64,7 +68,7 @@ extension Endpoint: EndpointType {
         case .patchUser:
             return .patch
             
-        case .postAuth, .postKakaoAuth, .postRefreshAuth:
+        case .postAuth, .postKakaoAuth, .postRefreshAuth, .postAppleAuth:
             return .post
             
         case .putUser:
@@ -80,20 +84,29 @@ extension Endpoint: EndpointType {
         case .getUserList, .getUser:
             return .none
             
-        case .putUser(let id):
+        case let .putUser(id):
             return .requestBody(json: ["id": id])
             
-        case .patchUser(let id):
+        case let .patchUser(id):
             return .requestBody(json: ["id": id])
             
-        case .postAuth(let token):
-            return .requestBody(json: token)
+        case let .postAuth(token):
+            return .requestBody(json: ["temp": token.nickname])
             
-        case .postKakaoAuth(let token):
-            return .requestBody(json: token)
+        case let .postKakaoAuth(token):
+            return .requestBody(json: [
+                "kakao_access_token": token.kakaoAccessToken,
+                "email": token.email
+            ])
             
-        case .postRefreshAuth(let token):
-            return .requestBody(json: token)
+        case let .postAppleAuth(token):
+            return .requestBody(json: [
+                "identifier": token.identifier,
+                "email": token.email
+            ])
+            
+        case let .postRefreshAuth(token):
+            return .requestBody(json: ["token": token.token])
             
         case .deleteUser:
             // TODO: Auth 다시 확인
@@ -104,8 +117,8 @@ extension Endpoint: EndpointType {
     var headers: HTTPHeaders? {
         return [
             HTTPHeaderFields.acceptType: HTTPHeaderFields.ContentType.json,
-//            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json,
-            HTTPHeaderFields.token: HTTPHeaderFields.tokenKey
+            HTTPHeaderFields.token: HTTPHeaderFields.tokenKey,
+            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json
         ]
     }
     
@@ -155,7 +168,8 @@ extension Endpoint: EndpointType {
         guard let parameter = parameter else { return }
         
         do {
-            // TODO: option이 필요한가요 ?
+            print(parameter)
+            
             let data = try JSONSerialization.data(withJSONObject: parameter, options: [])
             
             request.httpBody = data
