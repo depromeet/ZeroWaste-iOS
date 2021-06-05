@@ -35,13 +35,13 @@ enum Endpoint {
     case blockListUpdate(id: Int, blockList: BlockList)
     case blockListPartialUpdate(id: Int, blockList: BlockList)
 
-//    // MARK: Certification
-//    case certificationList
-//    case certificationListCreate
-//    case certificationListRead
-//    case certificationListUpdate
-//    case certificationListPartialUpdate
-//    case certificationListDelete
+    // MARK: Certification
+    case certificationList
+    case certificationListCreate(certification: Certification)
+    case certificationListRead(id: Int)
+    case certificationListUpdate(id: Int, certification: Certification)
+    case certificationListPartialUpdate(id: Int, certification: Certification)
+    case certificationListDelete(id: Int)
     
     // MARK: Auth
     case authAppleCreate(token: AppleLoginToken)
@@ -81,6 +81,14 @@ extension Endpoint: EndpointType {
             
         case .blockListRead(let id), .blockListUpdate(let id, _), .blockListPartialUpdate(let id, _):
             return "/blocklist/\(id)/"
+            
+        // MARK: Certification:
+        case .certificationList, .certificationListCreate:
+            return "/certification/"
+            
+        case .certificationListRead(let id), .certificationListUpdate(let id, _),
+             .certificationListPartialUpdate(let id, _), .certificationListDelete(let id): 
+            return "/certification/\(id)/"
         
         // MARK: Auth
         case .authKakaoCreate:
@@ -137,6 +145,22 @@ extension Endpoint: EndpointType {
         case .blockListPartialUpdate:
             return .patch
             
+        // MARK: Certification
+        case .certificationList, .certificationListRead:
+            return .get
+            
+        case .certificationListCreate:
+            return .post
+            
+        case .certificationListUpdate:
+            return .put
+            
+        case .certificationListPartialUpdate:
+            return .patch
+            
+        case .certificationListDelete:
+            return .delete
+            
         // MARK: Auth
         case .authKakaoCreate, .authRefreshCreate, .authAppleCreate:
             return .post
@@ -158,7 +182,7 @@ extension Endpoint: EndpointType {
     var task: HTTPTask {
         switch self {
         // MARK: Admin
-        case .bazziList, .bazziDelete:
+        case .bazziList, .bazziDelete, .bazziRead:
             return .none
         
         case .bazziCreate(let bazzi), .bazziUpdate(_, let bazzi), .bazziPartialUpdate(_, let bazzi):
@@ -167,9 +191,6 @@ extension Endpoint: EndpointType {
                 "icon_url": bazzi.iconUrl,
                 "description": bazzi.description
             ])
-            
-        case let .bazziRead(id):
-            return .requestHeader(urlParams: ["id": id])
             
         // MARK: BlockList
         
@@ -181,6 +202,20 @@ extension Endpoint: EndpointType {
                 "target_user_id": blockList.targetUserId,
                 "reporter_id": blockList.reporterId,
                 "description": blockList.description
+            ])
+            
+        // MARK: Certification
+        case .certificationList, .certificationListRead, .certificationListDelete:
+            return .none
+            
+        case .certificationListCreate(let certification), .certificationListUpdate(_, let certification), .certificationListPartialUpdate(_, let certification):
+            return .requestBody(json: [
+                "name": certification.name,
+                "owner": certification.owner,
+                "mission_id": certification.missionId,
+                "image": certification.image,
+                "content": certification.content,
+                "isPublic": certification.isPublic
             ])
             
         // MARK: Auth

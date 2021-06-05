@@ -15,6 +15,16 @@ struct Certification: Codable {
     let image: String
     let content: String
     let isPublic: Bool?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case owner
+        case missionId = "mission_id"
+        case image
+        case content
+        case isPublic
+    }
 }
 
 extension Certification {
