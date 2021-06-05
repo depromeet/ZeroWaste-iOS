@@ -19,7 +19,13 @@ targets:
       settings:
         base:
           INFOPLIST_FILE: ZeroWaste/Supporting/Info.plist
-          PRODUCT_BUNDLE_IDENTIFIER: Depromeet.ZeroWaste
+          PRODUCT_BUNDLE_IDENTIFIER: com.krgoodnews.ZeroWaste
+      entitlements: &entitlements
+        path: ZeroWaste/ZeroWaste.entitlements
+        properties:
+          aps-environment: development
+          com.apple.developer.associated-domains: []
+          com.apple.developer.applesignin: [Default]
       sources: [ZeroWaste]
 
   ZeroWasteTests:
@@ -28,7 +34,7 @@ targets:
       settings:
         base:
           INFOPLIST_FILE: ZeroWasteTests/Info.plist
-          PRODUCT_BUNDLE_IDENTIFIER: Depromeet.ZeroWasteTests
+          PRODUCT_BUNDLE_IDENTIFIER: com.krgoodnews.ZeroWasteTests
       sources: [ZeroWasteTests]
 
   ZeroWasteUITests:
@@ -37,5 +43,5 @@ targets:
       settings:
         base:
           INFOPLIST_FILE: ZeroWasteUITests/Info.plist
-          PRODUCT_BUNDLE_IDENTIFIER: Depromeet.ZeroWasteUITests
+          PRODUCT_BUNDLE_IDENTIFIER: com.krgoodnews.ZeroWasteUITests
       sources: [ZeroWasteUITests]
