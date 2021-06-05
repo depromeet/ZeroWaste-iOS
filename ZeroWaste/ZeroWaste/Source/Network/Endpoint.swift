@@ -25,16 +25,16 @@ enum Endpoint {
     case bazziPartialUpdate(id: Int, bazzi: Bazzi)
     case bazziDelete(id: Int)
 
-//    // MARK: Batch
-//    case batchParticipationCreate
-//    
-//    // MARK: BlockList
-//    case blockList
-//    case blockListCreate
-//    case blockListRead
-//    case blockListUpdate
-//    case blockListPartialUpdate
-//    
+    // MARK: Batch
+//    case batchParticipationCreate // 아직 미구현인듯
+    
+    // MARK: BlockList
+    case blockList
+    case blockListCreate(blockList: BlockList)
+    case blockListRead(id: Int)
+    case blockListUpdate(id: Int, blockList: BlockList)
+    case blockListPartialUpdate(id: Int, blockList: BlockList)
+
 //    // MARK: Certification
 //    case certificationList
 //    case certificationListCreate
@@ -73,7 +73,14 @@ extension Endpoint: EndpointType {
             return "/admin/bazzi/"
             
         case .bazziRead(let id), .bazziUpdate(let id, _), .bazziPartialUpdate(let id, _), .bazziDelete(let id):
-            return "/admin/bazzi/\(id)"
+            return "/admin/bazzi/\(id)/"
+            
+        // MARK: BlockList
+        case .blockList, .blockListCreate:
+            return "/blocklist/"
+            
+        case .blockListRead(let id), .blockListUpdate(let id, _), .blockListPartialUpdate(let id, _):
+            return "/blocklist/\(id)/"
         
         // MARK: Auth
         case .authKakaoCreate:
@@ -117,6 +124,19 @@ extension Endpoint: EndpointType {
         case .bazziDelete:
             return .delete
             
+        // MARK: BlockList
+        case .blockList, .blockListRead:
+            return .get
+        
+        case .blockListCreate:
+            return .post
+            
+        case .blockListUpdate:
+            return .put
+            
+        case .blockListPartialUpdate:
+            return .patch
+            
         // MARK: Auth
         case .authKakaoCreate, .authRefreshCreate, .authAppleCreate:
             return .post
@@ -150,6 +170,18 @@ extension Endpoint: EndpointType {
             
         case let .bazziRead(id):
             return .requestHeader(urlParams: ["id": id])
+            
+        // MARK: BlockList
+        
+        case .blockList, .blockListRead:
+            return .none
+            
+        case .blockListCreate(let blockList), .blockListUpdate(_, let blockList), .blockListPartialUpdate(_, let blockList):
+            return .requestBody(json: [
+                "target_user_id": blockList.targetUserId,
+                "reporter_id": blockList.reporterId,
+                "description": blockList.description
+            ])
             
         // MARK: Auth
         case let .authKakaoCreate(token):
