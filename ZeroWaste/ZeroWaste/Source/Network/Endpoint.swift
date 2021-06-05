@@ -17,19 +17,45 @@ protocol EndpointType {
 }
 
 enum Endpoint {
+    // MARK: Admin
+    case bazziList
+    case bazziCreate(bazzi: Bazzi)
+    case bazziRead(id: Int)
+    case bazziUpdate(id: Int, bazzi: Bazzi)
+    case bazziPartialUpdate(id: Int, bazzi: Bazzi)
+    case bazziDelete(id: Int)
+
+//    // MARK: Batch
+//    case batchParticipationCreate
+//    
+//    // MARK: BlockList
+//    case blockList
+//    case blockListCreate
+//    case blockListRead
+//    case blockListUpdate
+//    case blockListPartialUpdate
+//    
+//    // MARK: Certification
+//    case certificationList
+//    case certificationListCreate
+//    case certificationListRead
+//    case certificationListUpdate
+//    case certificationListPartialUpdate
+//    case certificationListDelete
+    
     // MARK: Auth
-    case postAuth(token: JSONWebToken)
-    case postKakaoAuth(token: KakaoLoginToken)
-    case postRefreshAuth(token: RefreshJSONWebToken)
-    case postAppleAuth(token: AppleLoginToken)
+    case authAppleCreate(token: AppleLoginToken)
+    case authKakaoCreate(token: KakaoLoginToken)
+    case authRefreshCreate(token: RefreshJSONWebToken)
+    
+    // MARK: Missions
     
     // MARK: Users
-    // TODO: 네이밍 어떻게 해야할지 잘 모르겠습니다!
-    case getUserList
-    case getUser(id: Int)
-    case putUser(id: Int)
-    case patchUser(id: Int)
-    case deleteUser(id: Int)
+    case userList
+    case userDoubleCheckList(nickName: String, auth: JSONWebToken)
+    case userRead(id: Int)
+    case usersPartialUpdate(id: Int, user: User)
+    case userDelete(id: Int)
 }
 
 extension Endpoint: EndpointType {
@@ -38,89 +64,146 @@ extension Endpoint: EndpointType {
         return url
     }
     
+    // MARK: Path
+    
     var path: String {
         switch self {
-        case .postAuth:
-            return "/jwt-auth/"
+        // MARK: Admin
+        case .bazziList, .bazziCreate:
+            return "/admin/bazzi/"
             
-        case .postKakaoAuth:
+        case .bazziRead(let id), .bazziUpdate(let id, _), .bazziPartialUpdate(let id, _), .bazziDelete(let id):
+            return "/admin/bazzi/\(id)"
+        
+        // MARK: Auth
+        case .authKakaoCreate:
             return "/jwt-auth/kakao/"
             
-        case .postRefreshAuth:
+        case .authRefreshCreate:
             return "/jwt-auth/refresh/"
             
-        case .postAppleAuth:
+        case .authAppleCreate:
             return "/jwt-auth/apple/"
         
-        case .getUserList:
+        // MARK: User
+        case .userList:
             return "/users/"
         
-        case .getUser(let id), .putUser(let id), .patchUser(let id), .deleteUser(let id):
+        case .userRead(let id), .usersPartialUpdate(let id, _), .userDelete(let id):
             return "/users/\(id)/"
+            
+        case .userDoubleCheckList:
+            return "/users/double_check"
         }
     }
     
+    // MARK: Method
+    
     var httpMethod: HTTPMethod {
         switch self {
-        case .getUser, .getUserList:
+        // MARK: Admin
+        case .bazziList, .bazziRead:
             return .get
             
-        case .patchUser:
-            return .patch
-            
-        case .postAuth, .postKakaoAuth, .postRefreshAuth, .postAppleAuth:
+        case .bazziCreate:
             return .post
             
-        case .putUser:
+        case .bazziUpdate:
             return .put
             
-        case .deleteUser:
+        case .bazziPartialUpdate:
+            return .patch
+            
+        case .bazziDelete:
+            return .delete
+            
+        // MARK: Auth
+        case .authKakaoCreate, .authRefreshCreate, .authAppleCreate:
+            return .post
+        
+        // MARK: User
+        case .userRead, .userList, .userDoubleCheckList:
+            return .get
+            
+        case .usersPartialUpdate:
+            return .patch
+            
+        case .userDelete:
             return .delete
         }
     }
     
+    // MARK: Task
+    
     var task: HTTPTask {
         switch self {
-        case .getUserList, .getUser:
+        // MARK: Admin
+        case .bazziList, .bazziDelete:
             return .none
+        
+        case .bazziCreate(let bazzi), .bazziUpdate(_, let bazzi), .bazziPartialUpdate(_, let bazzi):
+            return .requestBody(json: [
+                "name": bazzi.name,
+                "icon_url": bazzi.iconUrl,
+                "description": bazzi.description
+            ])
             
-        case let .putUser(id):
-            return .requestBody(json: ["id": id])
+        case let .bazziRead(id):
+            return .requestHeader(urlParams: ["id": id])
             
-        case let .patchUser(id):
-            return .requestBody(json: ["id": id])
-            
-        case let .postAuth(token):
-            return .requestBody(json: ["temp": token.nickname])
-            
-        case let .postKakaoAuth(token):
+        // MARK: Auth
+        case let .authKakaoCreate(token):
             return .requestBody(json: [
                 "kakao_access_token": token.kakaoAccessToken,
                 "email": token.email
             ])
             
-        case let .postAppleAuth(token):
+        case let .authAppleCreate(token):
             return .requestBody(json: [
                 "identifier": token.identifier,
                 "email": token.email
             ])
             
-        case let .postRefreshAuth(token):
+        case let .authRefreshCreate(token):
             return .requestBody(json: ["token": token.token])
+        
+        // MARK: User
+        
+        case .userList, .userRead:
+            return .none
             
-        case .deleteUser:
+        case let .usersPartialUpdate(_, user):
+            return .requestBody(json: [
+                "nickname": user.nickname,
+                "level": user.level,
+                "is_notify": user.isNotify,
+                "description": "string"
+            ])
+            
+        case let .userDoubleCheckList(nickName, auth):
+            return .requestHeader(urlParams: [
+                "nickname": nickName,
+                "Authorization": auth
+            ])
+            
+        case .userDelete:
             // TODO: Auth 다시 확인
             return .requestHeader(urlParams: ["Authorization": "something"])
         }
     }
     
+    // MARK: Header
+    
     var headers: HTTPHeaders? {
         return [
             HTTPHeaderFields.acceptType: HTTPHeaderFields.ContentType.json,
             HTTPHeaderFields.token: HTTPHeaderFields.tokenKey,
-            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json
+            HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json,
+            HTTPHeaderFields.authorization: "Token"
         ]
     }
+    
+    // MARK: Request
     
     func asURLRequest() throws -> URLRequest {
         var url = self.baseURL
@@ -145,6 +228,8 @@ extension Endpoint: EndpointType {
         
         return request
     }
+    
+    // MARK: Encoder
     
     private func encodeHeader(_ request: inout URLRequest, with parameter: Parameters?) throws {
         guard let parameter = parameter else { return }

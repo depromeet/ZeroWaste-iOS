@@ -11,7 +11,7 @@ struct BlockList {
     let id: Int?
     let targetUserId: Int
     let reporterId: Int
-    let description: Description
+    let description: Description?
 }
 
 extension BlockList {

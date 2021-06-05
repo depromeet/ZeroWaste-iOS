@@ -42,7 +42,7 @@ struct PledgeView: View {
                         .frame(height: 50)
                     
                     Text(Texts.pledgeDesc)
-                        .font(.SFProDisplayBold(size: 18))
+//                        .font(.SFProDisplayBold(size: 18))
                         .multilineTextAlignment(.center)
                     
                     Spacer()

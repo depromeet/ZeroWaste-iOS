@@ -54,7 +54,7 @@ private extension LoginViewModel {
         kakaoLoginSubject
             .flatMap { [provider] token in
                 return provider.networkService.request(
-                    with: Endpoint.postKakaoAuth(token: KakaoLoginToken(kakaoAccessToken: token.accessToken, email: nil)),
+                    with: Endpoint.authKakaoCreate(token: KakaoLoginToken(kakaoAccessToken: token.accessToken, email: nil)),
                     for: ResultBase<LoginResponse>.self
                 )
                 .catch { error -> Empty<ResultBase<LoginResponse>, Never> in
@@ -68,7 +68,7 @@ private extension LoginViewModel {
         appleLoginSubject
             .flatMap { [provider] token in 
                 return provider.networkService.request(
-                    with: Endpoint.postAppleAuth(token: AppleLoginToken(identifier: token.userID, email: token.email)),
+                    with: Endpoint.authAppleCreate(token: AppleLoginToken(identifier: token.userID, email: token.email)),
                     for: ResultBase<LoginResponse>.self
                 )
                 .catch { error -> Empty<ResultBase<LoginResponse>, Never> in
