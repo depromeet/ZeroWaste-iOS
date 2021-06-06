@@ -17,11 +17,12 @@ struct ContentsTabView: View {
     enum Tabs {
         case homeTab
         case missionTab
+        case communityTab
     }
 
     // MARK: - Property
 
-    @State private var tabSelection: Tabs = .missionTab
+    @State private var tabSelection: Tabs = .homeTab
 
     var body: some View {
         NavigationView {
@@ -57,6 +58,7 @@ struct ContentsTabView: View {
         switch tabSelection {
         case .homeTab: return "홈"
         case .missionTab: return "지도"
+        case .communityTab: return "커뮤니티"
         }
     }
 }

@@ -32,11 +32,12 @@ final class LoginViewModel: ObservableObject {
     @Published var isNewUser: Bool = UserProperties.isNewUser
     
     private let kakaoLoginSubject = PassthroughSubject<OAuthToken, Never>()
-    private let kakaoResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
     private let appleLoginSubject = PassthroughSubject<AppleUser, Never>()
-    private let appleResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
-    private var bag = Set<AnyCancellable>()
     
+    private let kakaoResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
+    private let appleResponseSubject = PassthroughSubject<ResultBase<LoginResponse>, Never>()
+    
+    private var bag = Set<AnyCancellable>()
     private let provider: ServiceProviderType
     
     init(provider: ServiceProviderType) {
@@ -91,6 +92,8 @@ private extension LoginViewModel {
                 UserProperties.isLoggedIn = true
                 UserProperties.isNewUser = response.data.isNewUser
                 UserProperties.userInfo = response.data
+                
+                print("user login response", response.data)
             }
             .store(in: &bag)
     }

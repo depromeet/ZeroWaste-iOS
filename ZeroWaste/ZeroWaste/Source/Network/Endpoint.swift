@@ -52,7 +52,7 @@ enum Endpoint {
     
     // MARK: Users
     case userList
-    case userDoubleCheckList(nickName: String, auth: JSONWebToken)
+    case userDoubleCheckList(nickName: String)
     case userRead(id: Int)
     case usersPartialUpdate(id: Int, user: User)
     case userDelete(id: Int)
@@ -232,11 +232,11 @@ extension Endpoint: EndpointType {
             ])
             
         case let .authRefreshCreate(token):
-            return .requestBody(json: ["token": token.token])
+            return .requestBody(json: ["token": token.token]) // 다시 확인
         
         // MARK: User
         
-        case .userList, .userRead:
+        case .userList, .userRead, .userDelete:
             return .none
             
         case let .usersPartialUpdate(_, user):
@@ -244,18 +244,13 @@ extension Endpoint: EndpointType {
                 "nickname": user.nickname,
                 "level": user.level,
                 "is_notify": user.isNotify,
-                "description": "string"
+                "description": "string"  // ??? 
             ])
             
-        case let .userDoubleCheckList(nickName, auth):
+        case let .userDoubleCheckList(nickName):
             return .requestHeader(urlParams: [
-                "nickname": nickName,
-                "Authorization": auth
+                "nickname": nickName
             ])
-            
-        case .userDelete:
-            // TODO: Auth 다시 확인
-            return .requestHeader(urlParams: ["Authorization": "something"])
         }
     }
     
@@ -266,7 +261,7 @@ extension Endpoint: EndpointType {
             HTTPHeaderFields.acceptType: HTTPHeaderFields.ContentType.json,
             HTTPHeaderFields.token: HTTPHeaderFields.tokenKey,
             HTTPHeaderFields.contentType: HTTPHeaderFields.ContentType.json,
-            HTTPHeaderFields.authorization: "Token"
+            HTTPHeaderFields.authorization: UserProperties.userInfo?.token ?? ""
         ]
     }
     
