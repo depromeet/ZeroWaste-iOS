@@ -8,6 +8,11 @@
 import Foundation
 
 struct ResultBase<T: Codable>: Codable {
-    let error_code: Int
+    let errorCode: Int
     let data: T
+    
+    enum CodingKeys: String, CodingKey {
+        case errorCode = "error_code"
+        case data
+    }
 }

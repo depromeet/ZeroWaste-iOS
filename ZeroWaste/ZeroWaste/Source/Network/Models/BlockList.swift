@@ -12,6 +12,13 @@ struct BlockList {
     let targetUserId: Int
     let reporterId: Int
     let description: Description?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case targetUserId = "target_user_id"
+        case reporterId = "reporter_id"
+        case description
+    }
 }
 
 extension BlockList {

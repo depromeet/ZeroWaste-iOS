@@ -25,7 +25,7 @@ enum HTTPMethod: String {
 }
 
 enum Network {
-    static let baseURL: String = "http://18.218.186.160:8000/api" 
+    static let baseURL: String = "http://woozoo.beautyvillage.net/api" 
 }
 
 enum HTTPHeaderFields {
@@ -52,6 +52,7 @@ enum NetworkError: Error {
     case jsonEncoding
     case parameterEncoding
     
+    case unableToEncode
     case unableToDecode
     case HTTPURLResponse
     case invalidConnection

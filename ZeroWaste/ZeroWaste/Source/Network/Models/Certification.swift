@@ -23,7 +23,7 @@ struct Certification: Codable {
         case missionId = "mission_id"
         case image
         case content
-        case isPublic
+        case isPublic = "is_public"
     }
 }
 
