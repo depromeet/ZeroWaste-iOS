@@ -9,18 +9,19 @@ import Foundation
 import Combine
 
 protocol NetworkManagerType {
-    func request<T: Codable>(with endpoint: EndpointType, for type: T.Type) -> AnyPublisher<T, Error>
+    func request<T: Codable>(with endpoint: Endpoint, for type: T.Type) -> AnyPublisher<T, Error>
 }
 
 final class NetworkManager: NetworkManagerType {
-    func request<T: Codable>(with endpoint: EndpointType, for type: T.Type) -> AnyPublisher<T, Error> {
+    func request<T: Codable>(with endpoint: Endpoint, for type: T.Type) -> AnyPublisher<T, Error> {
         let decoder = JSONDecoder()
         let session = URLSession(configuration: .default)
         guard let request = try? endpoint.asURLRequest() else { 
             return Fail(error: NetworkError.unableToMakeURLRequest).eraseToAnyPublisher() 
         }
         
-        print("request: ", request)
+        print("request: \(request)")
+        print("token: \(UserProperties.userInfo?.token ?? "no token")")
         
         return session
             .dataTaskPublisher(for: request)

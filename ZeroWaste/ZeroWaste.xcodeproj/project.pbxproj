@@ -22,6 +22,7 @@
 		3C95E41F572DD93695A3E645 /* Bool+isTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9BBB4335EC98CCC37665D /* Bool+isTrue.swift */; };
 		3E4829C6EC2A196B00681704 /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A0C774CC89445A0BF96A11 /* UserDefaultStorage.swift */; };
 		3E832DCE6EF684554CF2BA80 /* FeedProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33725FBDAD0FD08D0F3F013F /* FeedProfileView.swift */; };
+		40203CBD266DDD5D00FF1EE6 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40203CBC266DDD5D00FF1EE6 /* TestView.swift */; };
 		41318797F6EE81114A4095F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E398F9099FE433029F92BDDA /* Preview Assets.xcassets */; };
 		438F71B172D4D25F46EBDFB8 /* BlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06E5A4AEA8DE3037872AF1 /* BlockList.swift */; };
 		48127CC86550B281DB066B25 /* Pods_ZeroWasteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F7189546054DBFD3C22FD7 /* Pods_ZeroWasteTests.framework */; };
@@ -59,7 +60,7 @@
 
 /* Begin PBXFileReference section */
 		04F7189546054DBFD3C22FD7 /* Pods_ZeroWasteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroWasteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0506D3702BC672478D0889F7 /* ZeroWaste.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ZeroWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0506D3702BC672478D0889F7 /* ZeroWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A44913CC6F379B2980DFB0 /* CTAButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonStyle.swift; sourceTree = "<group>"; };
 		1331661A39915043CEFA8E71 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		13F8CE642D237698EA5FD50F /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		33725FBDAD0FD08D0F3F013F /* FeedProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProfileView.swift; sourceTree = "<group>"; };
 		38A691015DE13F9ADC589054 /* ZeroWasteRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeroWasteRelease.entitlements; sourceTree = "<group>"; };
 		39854FE0DD5B4B44DECF994F /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		40203CBC266DDD5D00FF1EE6 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		4210010A24D4EF6D7B41BF54 /* ResultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBase.swift; sourceTree = "<group>"; };
 		450A0F855BA7001F0A96ED29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A4FEA3F10D02A0AFED1602E /* ZeroWasteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroWasteTests.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 		62009614FC109CC5856F98AF /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		6208910BB9298D3B7AB8700A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ED9BBB4335EC98CCC37665D /* Bool+isTrue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+isTrue.swift"; sourceTree = "<group>"; };
-		703CDB5BCC05C6FBB25B3BC4 /* KOTRA_BOLD.otf */ = {isa = PBXFileReference; path = KOTRA_BOLD.otf; sourceTree = "<group>"; };
+		703CDB5BCC05C6FBB25B3BC4 /* KOTRA_BOLD.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRA_BOLD.otf; sourceTree = "<group>"; };
 		805FF855D937C3210DD3C2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		82F4E965ABCC2EF9C68E64E8 /* Pods-ZeroWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroWaste.release.xcconfig"; path = "Target Support Files/Pods-ZeroWaste/Pods-ZeroWaste.release.xcconfig"; sourceTree = "<group>"; };
 		83456EF801A2498CBA81C377 /* MissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCell.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				D5347D79DC02E06841E0464B /* Profile */,
 				528DBA16DD2E4B6D15A08C8A /* StyleGuide */,
 				10335F1EE32E6D4EDF75AE33 /* ViewStyle */,
+				40203CBC266DDD5D00FF1EE6 /* TestView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -368,7 +371,6 @@
 				DA094AF3D5C3AE7F604787D4 /* Pods-ZeroWasteTests.debug.xcconfig */,
 				EE3001B31EA4EDCAE2E62E15 /* Pods-ZeroWasteTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -518,8 +520,6 @@
 			attributes = {
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Depromeet;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 2A35543EBC4BFFD0E8E4584C /* Build configuration list for PBXProject "ZeroWaste" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -688,6 +688,7 @@
 				EB722986ADEAE4982B989BB2 /* MissionHomeView.swift in Sources */,
 				5401AB67670B652627B6825F /* MissionView.swift in Sources */,
 				0C9713971220D69049A0779A /* NetworkConstant.swift in Sources */,
+				40203CBD266DDD5D00FF1EE6 /* TestView.swift in Sources */,
 				60E9F973F42C5ED7966CB81D /* NetworkManager.swift in Sources */,
 				34916C68F8FE14AF8C5BC74B /* OnboardView.swift in Sources */,
 				8ED10C08C80AA51C465FDF30 /* OngoingMissionCell.swift in Sources */,
@@ -884,6 +885,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZeroWaste/ZeroWaste.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -936,6 +938,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZeroWaste/ZeroWaste.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 85329TR25G;
 				INFOPLIST_FILE = ZeroWaste/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

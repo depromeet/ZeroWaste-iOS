@@ -84,7 +84,7 @@ private extension LoginViewModel {
     func bindOutput() {
         Publishers.Merge(kakaoResponseSubject, appleResponseSubject)
             .sink { response in
-                guard response.error_code.hasNoError else { return }
+                guard response.errorCode.hasNoError else { return }
                 
                 self.isLoggedIn = true
                 self.isNewUser = response.data.isNewUser

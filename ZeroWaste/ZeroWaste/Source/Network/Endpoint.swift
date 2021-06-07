@@ -198,10 +198,15 @@ extension Endpoint: EndpointType {
             return .none
             
         case .blockListCreate(let blockList), .blockListUpdate(_, let blockList), .blockListPartialUpdate(_, let blockList):
+//            // 이렇게 하는게 맞나?
+//            let json = try? blockList.toJSON()
+//            return .requestBody(json: json)
+//            
+            // 기존
             return .requestBody(json: [
                 "target_user_id": blockList.targetUserId,
                 "reporter_id": blockList.reporterId,
-                "description": blockList.description
+                "description": blockList.description?.rawValue ?? 0
             ])
             
         // MARK: Certification

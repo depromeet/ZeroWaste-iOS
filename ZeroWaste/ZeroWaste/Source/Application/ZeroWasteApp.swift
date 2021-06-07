@@ -27,6 +27,7 @@ struct ZeroWasteApp: App {
                         _ = AuthController.handleOpenUrl(url: url)
                     }
                 })
+//            TestView()
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BlockList {
+struct BlockList: Codable {
     let id: Int?
     let targetUserId: Int
     let reporterId: Int

@@ -12,8 +12,8 @@ typealias Parameters = [String: Any?]
 
 enum HTTPTask {
     case none
-    case requestHeader(urlParams: Parameters)
-    case requestBody(json: Parameters)
+    case requestHeader(urlParams: Parameters?)
+    case requestBody(json: Parameters?)
 }
 
 enum HTTPMethod: String {
