@@ -39,13 +39,19 @@ struct ContentsTabView: View {
                 // MARK: 지도 탭
                 StoreMapView()
                     .tabItem {
-                        Image(systemName: "mappin.and.ellipse")
-                        Text("지도")
+                        Label("미션", image: "iconMission")
                     }
                     .tag(Tabs.missionTab)
+                
+                CommunityView()
+                    .tabItem {
+                        Label("커뮤니티", image: "iconCommunity")
+                    }
+                    .tag(Tabs.communityTab)
             }
 
-            .navigationBarTitle(navBarTitle(tabSelection: self.tabSelection), displayMode: .inline)
+            .navigationBarTitle(navBarTitle(tabSelection: self.tabSelection), displayMode: .large)
+            .font(.kotraBold(22))
             //add the NavigationBarTitle here.
 
         }

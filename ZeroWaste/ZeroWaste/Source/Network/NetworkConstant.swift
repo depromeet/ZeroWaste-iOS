@@ -13,7 +13,7 @@ typealias Parameters = [String: Any?]
 enum HTTPTask {
     case none
     case requestHeader(urlParams: Parameters?)
-    case requestBody(json: Parameters?)
+    case requestBody(body: Any?)
 }
 
 enum HTTPMethod: String {

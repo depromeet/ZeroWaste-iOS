@@ -186,11 +186,7 @@ extension Endpoint: EndpointType {
             return .none
         
         case .bazziCreate(let bazzi), .bazziUpdate(_, let bazzi), .bazziPartialUpdate(_, let bazzi):
-            return .requestBody(json: [
-                "name": bazzi.name,
-                "icon_url": bazzi.iconUrl,
-                "description": bazzi.description
-            ])
+            return .requestBody(body: bazzi)
             
         // MARK: BlockList
         
@@ -198,46 +194,24 @@ extension Endpoint: EndpointType {
             return .none
             
         case .blockListCreate(let blockList), .blockListUpdate(_, let blockList), .blockListPartialUpdate(_, let blockList):
-//            // 이렇게 하는게 맞나?
-//            let json = try? blockList.toJSON()
-//            return .requestBody(json: json)
-//            
-            // 기존
-            return .requestBody(json: [
-                "target_user_id": blockList.targetUserId,
-                "reporter_id": blockList.reporterId,
-                "description": blockList.description?.rawValue ?? 0
-            ])
+            return .requestBody(body: blockList)
             
         // MARK: Certification
         case .certificationList, .certificationListRead, .certificationListDelete:
             return .none
             
         case .certificationListCreate(let certification), .certificationListUpdate(_, let certification), .certificationListPartialUpdate(_, let certification):
-            return .requestBody(json: [
-                "name": certification.name,
-                "owner": certification.owner,
-                "mission_id": certification.missionId,
-                "image": certification.image,
-                "content": certification.content,
-                "isPublic": certification.isPublic
-            ])
+            return .requestBody(body: certification)
             
         // MARK: Auth
         case let .authKakaoCreate(token):
-            return .requestBody(json: [
-                "kakao_access_token": token.kakaoAccessToken,
-                "email": token.email
-            ])
+            return .requestBody(body: token)
             
         case let .authAppleCreate(token):
-            return .requestBody(json: [
-                "identifier": token.identifier,
-                "email": token.email
-            ])
+            return .requestBody(body: token)
             
         case let .authRefreshCreate(token):
-            return .requestBody(json: ["token": token.token]) // 다시 확인
+            return .requestBody(body: token)
         
         // MARK: User
         
@@ -245,12 +219,7 @@ extension Endpoint: EndpointType {
             return .none
             
         case let .usersPartialUpdate(_, user):
-            return .requestBody(json: [
-                "nickname": user.nickname,
-                "level": user.level,
-                "is_notify": user.isNotify,
-                "description": "string"  // ??? 
-            ])
+            return .requestBody(body: user)
             
         case let .userDoubleCheckList(nickName):
             return .requestHeader(urlParams: [
@@ -317,12 +286,15 @@ extension Endpoint: EndpointType {
     }
     
     private func encodeBody(_ request: inout URLRequest, with parameter: Any?) throws {
-        guard let parameter = parameter else { return }
+        guard let parameter = parameter,
+              let encodableParameter = parameter as? Encodable,
+              let json = try? encodableParameter.toJSON()      
+        else { return }
         
         do {
-            print(parameter)
+            print("body json: \(json)")
             
-            let data = try JSONSerialization.data(withJSONObject: parameter, options: [])
+            let data = try JSONSerialization.data(withJSONObject: json, options: [])
             
             request.httpBody = data
         } catch {
