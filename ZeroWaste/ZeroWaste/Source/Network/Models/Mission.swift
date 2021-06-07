@@ -8,15 +8,19 @@
 import Foundation
 
 struct Mission: Codable {
-    let id: Int?
+    let id: Int
     let name: String?
     let owner: Int
     let place: Place?
     let theme: String?
     let difficulty: Difficulty?
-    let logoImageUrl: String
-    let iconImageUrl: String
+    let bannerImgUrls: [URL]? // URL
     let content: String
+    let sentenceForCheer: String?
+    let signedUrlNum: Int?
+    let likesCount: Int?
+    let successfulCount: Int?
+    let inProgressCount: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -25,9 +29,13 @@ struct Mission: Codable {
         case place
         case theme
         case difficulty
-        case logoImageUrl = "logo_img_url"
-        case iconImageUrl = "icon_img_url"
+        case bannerImgUrls = "banner_img_urls"
         case content
+        case sentenceForCheer = "sentence_for_cheer"
+        case signedUrlNum = "signed_url_num"
+        case likesCount = "likes_count"
+        case successfulCount = "successful_count"
+        case inProgressCount = "in_progress_count"
     }
 }
 
@@ -48,5 +56,19 @@ extension Mission {
         case medium
         case hard
         case extraHard = "extra_hard"
+    }
+    
+    enum Theme: String, Codable {
+        case refuse
+        case reduce
+        case reuse
+        case recycle
+        case rot
+    }
+    
+    enum Ordering: String, Codable {
+        case recent
+        case popularity
+        case participation
     }
 }

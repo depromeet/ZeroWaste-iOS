@@ -49,6 +49,16 @@ enum Endpoint {
     case authRefreshCreate(token: RefreshJSONWebToken)
     
     // MARK: Missions
+    case missionsList(place: String, difficulty: Mission.Difficulty, theme: Mission.Theme, ordering: Mission.Ordering)
+    case missionsCreate(mission: Mission)
+    case missionsRead(id: Int)
+    case missionsUpdate(id: Int, mission: Mission)
+    case missionsPartialUpdate(id: Int, mission: Mission)
+    case missionsDelete(id: Int)
+    case missionsDislikeDelete(mission: Mission)
+    case missionsLikeCreate(mission: Mission) // 다시 보기
+    case missionsParticipationsCreate(mission: Mission) // 다시 보기
+    case missionsParticipationsPartialUpdate(id: Int, mission: Mission) // 다시 보기
     
     // MARK: Users
     case userList
@@ -99,6 +109,25 @@ extension Endpoint: EndpointType {
             
         case .authAppleCreate:
             return "/jwt-auth/apple/"
+            
+        // MARK: Missions
+        case .missionsList, .missionsCreate:
+            return "/missions/"
+        
+        case .missionsRead(let id), .missionsUpdate(let id, _), .missionsPartialUpdate(let id, _), .missionsDelete(let id):
+            return "/missions/\(id)/"
+            
+        case .missionsDislikeDelete(let mission):
+            return "/missions/\(mission.id)/dislike"
+            
+        case .missionsLikeCreate(let mission):
+            return "/missions/\(mission.id)/like"
+            
+        case .missionsParticipationsCreate(let mission):
+            return "/missions/\(mission.id)/paricipations/"
+            
+        case .missionsParticipationsPartialUpdate(let id, let mission):
+            return "/missions/\(mission.id)/paricipations/\(id)/"
         
         // MARK: User
         case .userList:
@@ -164,6 +193,22 @@ extension Endpoint: EndpointType {
         // MARK: Auth
         case .authKakaoCreate, .authRefreshCreate, .authAppleCreate:
             return .post
+            
+        // MARK: Missions
+        case .missionsList, .missionsRead:
+            return .get
+            
+        case .missionsCreate, .missionsLikeCreate, .missionsParticipationsCreate:
+            return .post
+            
+        case .missionsUpdate:
+            return .put
+            
+        case .missionsPartialUpdate, .missionsParticipationsPartialUpdate:
+            return .patch
+            
+        case .missionsDelete, .missionsDislikeDelete:
+            return .delete
         
         // MARK: User
         case .userRead, .userList, .userDoubleCheckList:
@@ -212,6 +257,23 @@ extension Endpoint: EndpointType {
             
         case let .authRefreshCreate(token):
             return .requestBody(body: token)
+        
+        // MARK: Mission
+        
+        case .missionsRead, .missionsDelete, .missionsDislikeDelete, .missionsLikeCreate, 
+             . missionsParticipationsCreate, .missionsParticipationsPartialUpdate:
+            return .none
+            
+        case let .missionsList(place, difficulty, theme, ordering):
+            return .requestHeader(urlParams: [
+                "place": place,
+                "difficulty": difficulty,
+                "theme": theme,
+                "ordering": ordering
+            ])
+            
+        case .missionsCreate(let mission), .missionsUpdate(_, let mission), .missionsPartialUpdate(_, let mission):
+            return .requestBody(body: mission)
         
         // MARK: User
         
