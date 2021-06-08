@@ -23,6 +23,7 @@ struct FeedProfileView: View {
                 .bold()
 
             Spacer()
+            
             Text("{미션명 (~~하러 가기)} >")
                 .font(.system(14, .bold))
         }

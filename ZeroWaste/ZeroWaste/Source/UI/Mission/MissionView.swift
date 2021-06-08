@@ -11,19 +11,18 @@ struct MissionView: View {
     var body: some View {
         ZStack {
             ScrollView(.vertical) {
-                VStack {
-                    Image(systemName: "shippingbox")
-                        .resizable()
-                        .padding()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, idealHeight: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .background(Color.secondary)
+                VStack(alignment: .leading) {
+                    Text("{n}" + "회 인증 완료")
+                        .font(.system(13, .regular))
+                        .foregroundColor(.zBlackHole)
+
+                    Text("{미션명}")
+                        .font(.kotraBold(22))
+                        .bold()
+
+                    CategoryCell()
 
                     VStack(alignment: .leading) {
-                        Text("미션명")
-                            .font(.title)
-                            .bold()
-                            .padding(.vertical, 8)
 
                         Text("걸리는 기간")
                         Text("해당 미션 상세 설명")
@@ -44,6 +43,8 @@ struct MissionView: View {
 
                 }
             }
+            .padding(.horizontal)
+            .padding(.top)
 
             VStack {
                 Spacer()
@@ -56,7 +57,7 @@ struct MissionView: View {
             }
 
         }
-        .navigationTitle("미션명")
+        .navigationBarTitle("", displayMode: .inline)
     }
 }
 

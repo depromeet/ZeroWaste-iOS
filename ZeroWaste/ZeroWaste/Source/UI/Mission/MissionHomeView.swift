@@ -13,7 +13,7 @@ struct MissionHomeView: View {
             VStack(alignment: .leading) {
                 // MARK: '진행중인 미션' Section
 
-                Text("진행중인 미션")
+                Text("오늘도 우쥬를\n지키러 와주셨군요!")
                     .font(.title2)
                     .bold()
                     .padding(.horizontal)
@@ -22,15 +22,18 @@ struct MissionHomeView: View {
                     LazyHStack {
                         ForEach(0..<3) { _ in
                             NavigationLink(destination: MissionView()) {
-                                MissionCell()
+                                OngoingMissionCell()
+                                    .frame(minWidth: 284)
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
 
                     }
                     .padding(.horizontal)
-                    .frame(height: 150)
+                    .frame(height: 134)
                 }
+                .shadow(radius: 10, y: 8)
+
                 .padding(.bottom)
 
                 // MARK: '참여 가능 미션' Section
@@ -74,8 +77,8 @@ struct MissionHomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MissionHomeView()
-                .navigationTitle("{미션}")
-
+                .navigationBarTitle("미션", displayMode: .inline)
         }
+
     }
 }

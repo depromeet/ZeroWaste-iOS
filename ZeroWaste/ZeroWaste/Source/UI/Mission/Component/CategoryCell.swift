@@ -10,11 +10,12 @@ import SwiftUI
 struct CategoryCell: View {
     var body: some View {
         Text("{카테고리명}")
-            .font(.caption)
+            .font(.system(13, .regular))
+            .foregroundColor(.zBlack)
             .padding(.vertical, 4)
-            .padding(.horizontal, 8)
-            .background(Color.gray)
-            .cornerRadius(4)
+            .padding(.horizontal, 12)
+            .background(Color.zGray3)
+            .cornerRadius(35)
     }
 }
 

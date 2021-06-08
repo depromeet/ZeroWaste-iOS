@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol ServiceProviderType {}
+protocol ServiceProviderType {
+    var networkService: NetworkManagerType { get }
+}
 
-final class ServiceProvider: ServiceProviderType {}
+final class ServiceProvider: ServiceProviderType {
+    lazy var networkService: NetworkManagerType = NetworkManager()
+}
